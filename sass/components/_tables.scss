@@ -1,0 +1,28 @@
+
+table, td, th {  
+	border: 1px solid $color__gray;
+	text-align: left;
+  }
+  
+  table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2em;
+  }
+  
+  th, td {
+	padding: .5em;
+  }
+
+  thead {
+	  background-color: $color__gray;
+  }
+
+
+.table-striped tbody tr {
+  background-color: $color__white;
+  &:nth-of-type(2n+1) {
+    background-color: $color__ligth;
+  }
+}
+  

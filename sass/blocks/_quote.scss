@@ -1,0 +1,22 @@
+.wp-block-quote {
+	margin-top: $space-xl;
+	margin-bottom: $space-xl;
+	
+	p {
+		margin-bottom: .5em;
+	}
+	
+	cite {
+		font-size: 80%;
+		font-weight: bold;
+	}
+
+	&.is-style-default::before {
+		border-top: 4px solid $color__primary;
+		content: '';
+		width: 168px;
+		height: 8px;
+		display: block;
+	}
+
+}

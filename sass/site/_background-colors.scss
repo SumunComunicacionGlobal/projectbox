@@ -1,0 +1,26 @@
+/* helpers backgorund & text colors */
+.bg-primary {
+    background-color: $color__primary;
+    color: $color__white;
+    a {color: $color__white;}
+}
+
+.bg-primary-dark {
+    background-color: $color__primary-dark;
+    color: $color__white;
+    a {color: $color__white;}
+}
+
+.bg-secondary {
+    background-color: $color__secondary;
+    color: $color__white;
+}
+
+.bg-primary-light {
+    background-color: $color__ligth;
+}
+
+.bg-white {
+    background-color: $color__white;
+}
+

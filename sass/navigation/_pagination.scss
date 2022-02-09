@@ -1,0 +1,46 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: $space-xl 0;
+
+    .nav-links {
+        display: flex;
+
+        a, span {
+            background-color: $color__link;
+            color: $color__white;
+            padding: $space-xxs;
+            border-radius: 100%;
+            width: $space-md;
+            height: $space-md;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: $space__unit;
+        }
+
+        .next.page-numbers, .prev.page-numbers {
+            width: $space-xxxl;
+            border-radius: $border__radius;
+        }
+
+        & span.current{
+            background-color: $color__gray;
+            color: $color__primary-60;
+        }
+    }
+
+    .page-link {
+        position: relative;
+        display: block;
+        padding: .5rem .75rem;
+        line-height: 1.25;
+        color: $color__white;
+        
+        &:hover {
+            background-color: $color__link;
+            border-radius: $border__radius;
+            color: $color__white;
+        }
+    }
+}

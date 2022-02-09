@@ -1,0 +1,66 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__white; /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: $color__ligth;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.bagde {
+	display: inline-block;
+	vertical-align: middle;
+	padding: .25rem 1rem;
+	color: #fff;
+	border-radius: $border__radius;
+	background-color: $color__primary-dark;
+	font-size: 80%;
+
+	&--success {
+		background-color: $color__success;
+	}
+
+	&--error {
+		background-color: $color__error;
+	}
+}
+a.bagde {
+	margin: 0 $space-xxs $space-xxs 0;
+	cursor: pointer;
+	color: $color__white;
+	&:hover{
+		background-color: $color__secondary;
+		color: $color__white;
+	}
+}
+
+.divider {
+    height: $space-xxs;
+    background-color: $color__primary;
+    max-width: 168px;
+    margin-bottom: $space-md;
+    margin-top: $space-sm;
+
+}

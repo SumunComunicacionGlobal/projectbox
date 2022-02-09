@@ -1,0 +1,13 @@
+.wp-block-separator {
+	opacity: 1;
+}
+
+.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
+    height: 8px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    width: 168px;
+	color: $color__primary;
+	border-bottom: 8px solid;
+}

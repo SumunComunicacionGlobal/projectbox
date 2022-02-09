@@ -1,0 +1,69 @@
+/*!
+Theme Name: sumun
+Theme URI: https://underscores.me/
+Author: Alvaro Rubioc
+Author URI: https://alvarorubioc.com/
+Description: Hola. Esto es el tema llamano <code>sumun</code>, para <em>Grupo sumun</em>.
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: sumun
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+sumun theme is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Core
+--------------------------------------------------------------*/
+@import "core/variables";
+@import "core/spacing";
+@import "core/mixins-master";
+@import "core/flexbox";
+@import "core/typography";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/accessibility";
+@import "components/buttons";
+@import "components/captions";
+@import "components/cards";
+@import "components/elements";
+@import "components/fields";
+@import "components/galleries";
+@import "components/lists";
+@import "components/media";
+@import "components/tables";
+
+/*--------------------------------------------------------------
+# Gutenberg Blocks
+--------------------------------------------------------------*/
+@import "blocks/blocks";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/links";
+@import "navigation/menus";
+@import "navigation/pagination";
+
+/*--------------------------------------------------------------
+# Site
+--------------------------------------------------------------*/
+@import "site/background-colors";
+@import "site/hero";
+@import "site/posts-and-pages";
+@import "site/footer";
+

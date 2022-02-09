@@ -1,0 +1,12 @@
+.wp-block-gallery {
+	
+	&.has-nested-images figure.wp-block-image img {
+		width: fit-content;	
+	}
+
+	&.aligncenter {
+		img {
+			align-self: center;
+		}
+	}
+}
