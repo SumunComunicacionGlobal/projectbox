@@ -17,7 +17,7 @@ Instalación
 
 ### Cómo empezar
 
-Clona o descarga este repositorio `$ git clone https://github.com/SumunComunicacionGlobal/sumun-wp` en tu carpeta de themes.
+Clona o descarga este repositorio `$ git clone https://github.com/SumunComunicacionGlobal/projectbox` en tu carpeta de themes.
 
 ### Setup
 
