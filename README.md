@@ -3,7 +3,7 @@
 sumun
 ===
 
-Hola. Esto es el tema `sumun`, para Grupo sumun S.L., está basado en el starter theme Underscores.
+Hola. Esto es el tema `sumun projectbox`, para ., está basado en el starter theme Underscores.
 
 Instalación
 ---------------
