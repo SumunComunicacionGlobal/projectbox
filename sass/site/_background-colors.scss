@@ -1,26 +1,26 @@
 /* helpers backgorund & text colors */
 .bg-primary {
-    background-color: $color__primary;
-    color: $color__white;
-    a {color: $color__white;}
+    background-color: color(primary);
+    color: color(body-white);
+    a {color: color(body-white);}
 }
 
 .bg-primary-dark {
-    background-color: $color__primary-dark;
-    color: $color__white;
-    a {color: $color__white;}
+    background-color: color(primary)-dark;
+    color: color(body-white);
+    a {color: color(body-white);}
 }
 
 .bg-secondary {
-    background-color: $color__secondary;
-    color: $color__white;
+    background-color: color(secondary);
+    color: color(body-white);
 }
 
 .bg-primary-light {
-    background-color: $color__ligth;
+    background-color: color(primary-20);
 }
 
 .bg-white {
-    background-color: $color__white;
+    background-color: color(body-white);
 }
 

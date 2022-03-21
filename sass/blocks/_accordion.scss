@@ -1,7 +1,7 @@
 .accordion-block {
 	
 	.accordion-btn {
-		background-color: $color__gray;
+		background-color: color(primary);
 		cursor: pointer;
 		width: 100%;
 		border: none;
@@ -10,14 +10,14 @@
 		outline: none;
 		transition: 0.4s;
 		justify-content: start;
-		padding: $space__unit $space-xs;
+		padding: $space__unit $space-2;
 		position: relative;
 		margin-bottom: 1px;
-		color: $color__text-main;
+		color: color(body-main);
 
 		&:hover, .active & {
-			background-color: $color__primary-40;
-			color: $color__white;
+			background-color: color(primary-40);
+			color: color(body-white);
 		}
 
 		h3 {
@@ -36,13 +36,13 @@
 
 		span:before {
 			content: '\002B';
-			color: $color__white;
-			background-color: $color__primary;
+			color: color(body-white);
+			background-color: color(primary);
 			border-radius: 100%;
 			font-size: 1.25rem;
-			width: $space-md;
-			height: $space-md;
-			margin-right: $space-xxs;
+			width: $space-4;
+			height: $space-4;
+			margin-right: $space-05;
 			float: left;
 			text-align: center;
 		}
@@ -50,7 +50,7 @@
 
 	.active span:before {
 		content: "\2212";
-		background-color: $color__secondary;
+		background-color: color(secondary);
 	}
 	
 	.panel {

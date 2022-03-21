@@ -3,12 +3,18 @@
 .entry-content {
 
 	& > [class*="wp-block-"]:not(.alignfull):not(.alignwide) {
-		@include container;
+		//@include container;
+	}
+
+	@for $index from 1 through 6 {
+		h#{$index} {
+			//@include container;
+		}
 	}
 
 	& > [class*="wp-block-"]:not(.alignfull).alignwide {
-		margin-right: 1.5rem;
-		margin-left: 1.5rem;
+		//margin-right: 1.5rem;
+		//margin-left: 1.5rem;
 	}
 
 	.alignfull > .wp-block-group__inner-container {	
@@ -19,8 +25,6 @@
 
 .wp-block-columns {
 
-	margin-bottom: $space-xl;
-
 	&.has-background {
 		padding: 0;	
 		margin-bottom: 0;
@@ -30,23 +34,14 @@
 .wp-block-group {
 
 	&.has-background {
-    	padding: $space-xl 0 $space-xl 0;
-    	margin-top: 0;
-		margin-bottom: 0;
+    	
 	}
 
 	.wp-block-columns {
 		margin-bottom: 0;
 
 		.wp-block-columns {
-			margin-bottom: $space-md;
+			margin-bottom: $space-4;
 		}
 	}
-}
-
-.is-style-container-fluid {
-	margin-right: auto;
-  	margin-left: auto;
-  	padding-right: 1.5rem;
-  	padding-left: 1.5rem;
 }

@@ -1,29 +1,76 @@
-/* main colors */
-$color__primary: #244985;
-$color__secondary: #E45510;
-$color__white: #ffffff;
+/* COLORS */
+$primary-colors: (
+    primary: #0020C1,
+    100: #202945,
+    80: #1D70B7,
+    60: #4984B7,
+    40: #6E95B7,
+    20: #92A6B7,
+);
 
-/* primary colors */
-$color__primary-dark: #101820;
-$color__primary-80: #132645;
-$color__primary-60: #203352;
-$color__primary-40: #384E72;
-$color__primary-20: #DFD5E6;
+$secondary-colors: (
+    secondary: #FFAE0F,
+    secondary-100: #FFC25E,
+    secondary-80: #FFEC00,
+    secondary-60: #FFF466,
+    secondary-40: #FFF799,
+    secondary-20: #FFFBCC,
+);
 
-/* text colors */
-$color__link: #E45510;
-$color__link-hover: #f5414f;
-$color__text-main: #101820;
+$accent-colors: (
+    accent-green: #93C01F,
+    accent-purple: #941B80,
+    accent-magenta: #D60B51,
+    accent-pink: #FFC5DF,
+);
 
-/* feedback */
-$color__success: #88c459;
-$color__error: #f5414f;
-$color__warning: #ffd137;
+$text-colors: (
+    body-main: #1A1A1A,
+    body-medium: #76787C,
+    body-link: #0020C1,
+    body-link--hover: #1D70B7,
+    body-white: white,
+);
 
-/* Backgrounds colors */
-$color__ligth: #F4F5F7;
-$color__gray: #c4cdd5;
-$color__gray-dark: #444;
+$feedback-colors: (
+    color-error: #FF0000,
+    color-warning: #FFD11C,
+    color-info: #3CB4FA,
+);
+
+
+$background-colors: (
+    
+);
+
+
+@function map-collect($maps...) {
+    $collection: ();
+  
+    @each $map in $maps {
+      $collection: map-merge($collection, $map);
+    }
+    @return $collection;
+}
+
+$allColors: map-collect($primary-colors, $secondary-colors, $accent-colors, $text-colors, $background-colors, $feedback-colors); 
+$gutenbergColors: map-collect($primary-colors, $secondary-colors, $accent-colors, $background-colors); 
+
+// Function to get a value from map. How to use: .class { color: color(primary) } 
+@function color($key) {
+    @return map-get($allColors, $key);
+    
+}
+
+// Generate Gutenberg Colour Classes
+@each $key, $value in $gutenbergColors {
+	.has-#{$key}-color {
+		color: $value;
+	}
+	.has-#{$key}-background-color {
+		background-color: $value;
+	}
+}
 
 
 /* Border radius */
@@ -43,11 +90,20 @@ $font__line-height-pre: 1.6;
 $space__unit: 1rem;
 
 /* space scale */
-$space-xxs: calc(0.5 * #{$space__unit}); // 8px
-$space-xs: calc(1.5 * #{$space__unit}); // 24px
-$space-sm: calc(2 * #{$space__unit}); // 32px
-$space-md: calc(2.5 * #{$space__unit}); // 40px
-$space-lg: calc(3.5 * #{$space__unit}); // 56px
-$space-xl: calc(4 * #{$space__unit}); // 64px
-$space-xxl: calc(6 * #{$space__unit}); // 80px
-$space-xxxl: calc(8 * #{$space__unit}); // 96px
+$space-05: calc(0.5 * #{$space__unit}); // 8px
+$space-1: $space__unit; // 16px
+$space-2: calc(1.5 * #{$space__unit}); // 24px
+$space-3: calc(2 * #{$space__unit}); // 32px
+$space-4: calc(2.5 * #{$space__unit}); // 40px
+
+$space-5: calc(3.5 * #{$space__unit}); // 56px
+$space-6: calc(4 * #{$space__unit}); // 64px
+$space-7: calc(4.5 * #{$space__unit}); // 72px
+$space-8: calc(5 * #{$space__unit}); // 80px
+
+$space-9: calc(6 * #{$space__unit}); // 96px
+$space-10: calc(7 * #{$space__unit}); // 112px
+
+/* Layout, width and gap */
+$grid__gap: 2rem;
+$grid__gap-row: -$grid__gap;

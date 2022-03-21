@@ -1,18 +1,18 @@
 .pagination {
     display: flex;
     justify-content: center;
-    margin: $space-xl 0;
+    margin: $space-6 0;
 
     .nav-links {
         display: flex;
 
         a, span {
-            background-color: $color__link;
-            color: $color__white;
-            padding: $space-xxs;
+            background-color: color(body-link);
+            color: color(body-white);
+            padding: $space-05;
             border-radius: 100%;
-            width: $space-md;
-            height: $space-md;
+            width: $space-4;
+            height: $space-4;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -20,13 +20,13 @@
         }
 
         .next.page-numbers, .prev.page-numbers {
-            width: $space-xxxl;
+            width: $space-9;
             border-radius: $border__radius;
         }
 
         & span.current{
-            background-color: $color__gray;
-            color: $color__primary-60;
+            background-color: color(primary);
+            color: color(primary)-60;
         }
     }
 
@@ -35,12 +35,12 @@
         display: block;
         padding: .5rem .75rem;
         line-height: 1.25;
-        color: $color__white;
+        color: color(body-white);
         
         &:hover {
-            background-color: $color__link;
+            background-color: color(body-link);
             border-radius: $border__radius;
-            color: $color__white;
+            color: color(body-white);
         }
     }
 }

@@ -8,9 +8,9 @@ input,
 select,
 optgroup,
 textarea {
-color: $color__text-main;
+color: color(body-main);
 font-family: $font__main;
-@include font-size(0.875);
+@include font-size(1);
 line-height: $font__line-height-body;
 
 }
@@ -35,7 +35,7 @@ address {
 }
 
 pre {
-    background: $color__ligth;
+    background: color(primary-20);
     font-family: $font__pre;
     @include font-size(0.9375);
     line-height: $font__line-height-pre;
@@ -51,12 +51,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-    border-bottom: 1px dotted $color__ligth;
+    border-bottom: 1px dotted color(primary-20);
     cursor: help;
 }
 
 mark, ins {
-    background: $color__ligth;
+    background: color(primary-20);
     text-decoration: none;
 }
 
@@ -108,7 +108,7 @@ h1, .text-h1  {
     &.display {
         font-weight: 100;
         text-transform: uppercase;
-        margin-bottom: $space-sm;
+        margin-bottom: $space-3;
     }
 }
 

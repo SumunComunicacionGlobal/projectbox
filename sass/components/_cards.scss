@@ -1,5 +1,5 @@
 @mixin card {
-    background: $color__primary;
+    background: color(primary);
     position: relative;
     display: flex;
     border-radius: $border__radius;
@@ -11,7 +11,7 @@
     }
     
     .card-content {
-        padding: $space-sm;
+        padding: $space-3;
         transition: (.3s all ease-in-out);
     
         a::before{
@@ -24,7 +24,7 @@
         }
     
         svg {
-            fill: $color__secondary;    
+            fill: color(secondary);    
         }
     }    
 }

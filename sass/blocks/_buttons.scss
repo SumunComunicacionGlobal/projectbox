@@ -1,7 +1,7 @@
 // Custom Buttons
 .wp-block-button:not(.is-style-with-icon) .wp-block-button__link{
 	@include button;
-    padding: 0.65rem $space-md;
+    padding: 0.65rem $space-4;
 }
 
 .wp-block-button__link {
@@ -20,10 +20,10 @@
 		@include btn(white__fill);
 	}
 	&.has-secondary-color {
-		color: $color__secondary;
+		color: color(secondary);
 	}
 	&.has-dark-color {
-		color: $color__primary-dark;
+		color: color(primary)-dark;
 	}
 }
 
@@ -31,7 +31,7 @@
 	@include btn(primary__outline);
 
 	.has-background & {
-		border: 2px solid $color__white;
+		border: 2px solid color(body-white);
 	}
 
 	&.has-primary-background-color {

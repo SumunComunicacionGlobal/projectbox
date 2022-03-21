@@ -91,92 +91,92 @@
 @mixin btn($param) {
 
 	@if $param == primary__fill {
-		background-color: $color__primary;
-		border: 2px solid $color__primary;
-		color: $color__white;
+		background-color: color(primary);
+		border: 2px solid color(primary);
+		color: color(body-white);
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary-dark;
-			border-color: $color__primary-dark;
+			background-color: color(primary)-dark;
+			border-color: color(primary)-dark;
 		}
 
 		fill {
-			color: $color__white;
+			color: color(body-white);
 		}
 	}
 	   
 	@else if $param == secondary__fill {
-		background-color: $color__secondary;
-		border: 2px solid $color__secondary;
-		color: $color__white;
+		background-color: color(secondary);
+		border: 2px solid color(secondary);
+		color: color(body-white);
 		@include fontSmooth;
 
 		&:hover {
-			background-color: $color__primary-dark;
-			color: $color__white;
-			border-color: $color__primary-dark;
+			background-color: color(primary)-dark;
+			color: color(body-white);
+			border-color: color(primary)-dark;
 		}
 	}
 	
 	@else if $param == dark__fill {
-		background-color: $color__primary-dark;
-		border: 2px solid $color__primary-dark;
-		color: $color__white;
+		background-color: color(primary)-dark;
+		border: 2px solid color(primary)-dark;
+		color: color(body-white);
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary;
-			color: $color__white;
-			border-color: $color__primary;
+			background-color: color(primary);
+			color: color(body-white);
+			border-color: color(primary);
 		}
    }
 	@else if $param == white__fill {
-		background-color: $color__white;
-		border: 2px solid $color__white;
-		color: $color__primary-dark;
+		background-color: color(body-white);
+		border: 2px solid color(body-white);
+		color: color(primary)-dark;
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary !important;
-			color: $color__white;
-			border-color: $color__primary;
+			background-color: color(primary) !important;
+			color: color(body-white);
+			border-color: color(primary);
 		}
 	}
 	@else if $param == primary__outline {
 		background-color: transparent;
-		border: 2px solid $color__secondary;
-		color: $color__secondary;
+		border: 2px solid color(secondary);
+		color: color(secondary);
 		@include fontSmooth;
-		a {color: $color__secondary;}
+		a {color: color(secondary);}
 		&:hover {
-			background-color: $color__white;
-			color: $color__secondary;
-			border-color: $color__primary-dark;
+			background-color: color(body-white);
+			color: color(secondary);
+			border-color: color(primary)-dark;
 		}
 	}
 	@else if $param == dark__outline {
 		background-color: transparent;
-		border: 2px solid $color__primary-dark;
-		color: $color__primary-dark;
+		border: 2px solid color(primary)-dark;
+		color: color(primary)-dark;
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary-dark;
-			color: $color__white;
-			border-color: $color__primary-dark;
+			background-color: color(primary)-dark;
+			color: color(body-white);
+			border-color: color(primary)-dark;
 		}
 	}
 	@else if $param == white__outline {
 		background-color: transparent;
-		border: 2px solid $color__white;
-		color: $color__white;
+		border: 2px solid color(body-white);
+		color: color(body-white);
 		@include fontSmooth;
 	
 		&:hover {
-			background-color: $color__primary;
-			color: $color__white;
-			border-color: $color__primary;
+			background-color: color(primary);
+			color: color(body-white);
+			border-color: color(primary);
 		}
 	}
  }
