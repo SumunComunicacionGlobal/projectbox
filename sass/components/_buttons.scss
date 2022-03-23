@@ -3,7 +3,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	@include button;
-	@include btn(primary__fill);
     padding: 0.65rem $space-4;
 	border: 0;
 	
@@ -34,6 +33,3 @@ input[type="submit"] {
 		color: color(secondary);
 	}
 }
-
-
-

@@ -5,9 +5,8 @@
 @import "core/mixins-master";
 @import "core/spacing";
 @import "blocks/blocks";
-@import "components/lists";
 @import "components/cards";
-@import "core/typography";
+//@import "core/typography";
 
 html:where(.editor-styles-wrapper) {
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;

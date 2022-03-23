@@ -62,16 +62,6 @@ $gutenbergColors: map-collect($primary-colors, $secondary-colors, $accent-colors
     
 }
 
-// Generate Gutenberg Colour Classes
-@each $key, $value in $gutenbergColors {
-	.has-#{$key}-color {
-		color: $value;
-	}
-	.has-#{$key}-background-color {
-		background-color: $value;
-	}
-}
-
 
 /* Border radius */
 $border__radius: 24px;

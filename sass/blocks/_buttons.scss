@@ -1,49 +1,22 @@
 // Custom Buttons
 .wp-block-button:not(.is-style-with-icon) .wp-block-button__link{
 	@include button;
-    padding: 0.65rem $space-4;
-}
+    padding: 0.8125rem $space-3;
+	opacity: 0.9;
+	
+	&:hover {
+		opacity: 1; 
+	}
 
-.wp-block-button__link {
-    @include btn(secondary__fill);
-
-	&.has-primary-background-color {
-		@include btn(primary__fill);
-	}
-	&.has-secondary-background-color {
-		@include btn(secondary__fill);
-	}
-	&.has-dark-background-color {
-		@include btn(dark__fill);
-	}
-	&.has-white-background-color {
-		@include btn(white__fill);
-	}
-	&.has-secondary-color {
-		color: color(secondary);
-	}
-	&.has-dark-color {
-		color: color(primary)-dark;
+	&:visited, &:focus {
+		color: currentColor;
 	}
 }
 
-.is-style-outline .wp-block-button__link {
-	@include btn(primary__outline);
+.wp-block-button.is-style-outline .wp-block-button__link {
+	border-radius: 0;
 
-	.has-background & {
-		border: 2px solid color(body-white);
-	}
-
-	&.has-primary-background-color {
-		@include btn(primary__outline);
-	}
-	&.has-secondary-background-color {
-		@include btn(secondary__outline);
-	}
-	&.has-dark-background-color {
-		@include btn(dark__outline);
-	}
-	&.has-white-background-color {
-		@include btn(white__outline);
+	&:hover {
+		color: inherit;
 	}
 }

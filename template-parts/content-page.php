@@ -9,13 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-9'); ?>>
 
-	<?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
+	<header class="entry-header">	
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
 
-	<?php sumun_post_thumbnail(); ?>
-
-	<div class="entry-content container">
+	<div class="entry-content">
 		<?php
 		the_content();
 

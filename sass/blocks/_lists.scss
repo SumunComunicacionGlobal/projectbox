@@ -3,7 +3,7 @@ ul, ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: square;
 }
 
 ol {
@@ -27,28 +27,22 @@ dd {
 	margin: 0 $space__unit $space__unit;
 }
 
-ul.is-style-check-list {
+ul.is-style-arrow-list {
 	list-style: none;
-	font-size: 1.125rem;
 	position: relative;
-	@include breakpoint(tablet) {
-        padding: 0;
-    }
-	
+	padding: 0;
 
 	li {
 		display: flex;
 		align-items: center; 
 		padding-bottom: $space-4;
 	}
+
 	li:before{
 		display: inline-flex;
-		content: '';
-		background-image: url('assets/icons/check.svg');
-		background-size: 32px 32px;
-		background-repeat: no-repeat;
-		height: 32px;
-		width: 32px;
-		padding-right: 2.5em;
+		content: url('assets/icons/arrow-right.svg');
+		height: .5rem;
+		width: .5rem;
+		padding-right: 1rem;
 	}
 }

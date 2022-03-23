@@ -29,13 +29,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-// Responsive
+// Responsive breakpoints
 @mixin breakpoint($point) {
 	@if $point == desktop {
 	  @media (max-width: 1440px) { @content ; }
    	}
 	@else if $point == laptop {
-	  @media (max-width: 1200px) { @content ; }
+	  @media (max-width: 1280px) { @content ; }
    	}
 	 @else if $point == tablet {
 	  @media (max-width: 1024px) { @content ; }
@@ -46,28 +46,33 @@
    	@else if $point == xsmobile {
 	  @media (max-width: 414px)  { @content ; }
    	}
- }
+}
+
 
 // Container
 @mixin container {
 	margin-right: auto;
   	margin-left: auto;
-  	padding-right: 1.5rem;
-  	padding-left: 1.5rem;
-
+  	padding-right: $grid__gap;
+  	padding-left: $grid__gap;
+	
+	// 768px Tablet
 	@media only screen and (min-width: 48em) {
-		width: 46rem;
+		//width: 46rem;
 	}
 
+	// 1024px Tablet
 	@media only screen and (min-width: 64em) {
-		width: 62rem;
-	}
-
-	@media only screen and (min-width: 80em) {
-		width: 72rem;
+		//width: 62rem;
 	}
 	
-	@media only screen and (min-width: 91em) {
+	// 1280px Laptop
+	@media only screen and (min-width: 80em) {
+		max-width: 80rem; // 1216px - 32px padding 
+	}
+
+	// +1440px Desktop
+	@media only screen and (min-width: 90.0625em) {
 		width: 88rem;
 	}
 }
@@ -85,98 +90,31 @@
 	justify-content: center;
 	cursor: pointer;
 	font-family: $font__main;
-	
+	@include fontSmooth;
 }
 
-@mixin btn($param) {
 
-	@if $param == primary__fill {
-		background-color: color(primary);
-		border: 2px solid color(primary);
-		color: color(body-white);
-		@include fontSmooth;
-	
-		&:hover {
-			background-color: color(primary)-dark;
-			border-color: color(primary)-dark;
-		}
+// Loops to enumerate the classes for grid columns.
+@for $i from 2 through 9 {
 
-		fill {
-			color: color(body-white);
-		}
-	}
-	   
-	@else if $param == secondary__fill {
-		background-color: color(secondary);
-		border: 2px solid color(secondary);
-		color: color(body-white);
-		@include fontSmooth;
+	.grid-columns-#{$i} {
+		display: grid;
+		gap: $space-3;
+		grid-template-columns: repeat($i, 1fr);
 
-		&:hover {
-			background-color: color(primary)-dark;
-			color: color(body-white);
-			border-color: color(primary)-dark;
+		@include breakpoint(mobile) {
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
-	
-	@else if $param == dark__fill {
-		background-color: color(primary)-dark;
-		border: 2px solid color(primary)-dark;
-		color: color(body-white);
-		@include fontSmooth;
-	
-		&:hover {
-			background-color: color(primary);
-			color: color(body-white);
-			border-color: color(primary);
-		}
-   }
-	@else if $param == white__fill {
-		background-color: color(body-white);
-		border: 2px solid color(body-white);
-		color: color(primary)-dark;
-		@include fontSmooth;
-	
-		&:hover {
-			background-color: color(primary) !important;
-			color: color(body-white);
-			border-color: color(primary);
-		}
+}
+
+
+// Generate Gutenberg Colour Classes
+@each $key, $value in $gutenbergColors {
+	.has-#{$key}-color {
+		color: $value;
 	}
-	@else if $param == primary__outline {
-		background-color: transparent;
-		border: 2px solid color(secondary);
-		color: color(secondary);
-		@include fontSmooth;
-		a {color: color(secondary);}
-		&:hover {
-			background-color: color(body-white);
-			color: color(secondary);
-			border-color: color(primary)-dark;
-		}
+	.has-#{$key}-background-color {
+		background-color: $value;
 	}
-	@else if $param == dark__outline {
-		background-color: transparent;
-		border: 2px solid color(primary)-dark;
-		color: color(primary)-dark;
-		@include fontSmooth;
-	
-		&:hover {
-			background-color: color(primary)-dark;
-			color: color(body-white);
-			border-color: color(primary)-dark;
-		}
-	}
-	@else if $param == white__outline {
-		background-color: transparent;
-		border: 2px solid color(body-white);
-		color: color(body-white);
-		@include fontSmooth;
-	
-		&:hover {
-			background-color: color(primary);
-			color: color(body-white);
-			border-color: color(primary);
-		}
-	}
- }
+}
