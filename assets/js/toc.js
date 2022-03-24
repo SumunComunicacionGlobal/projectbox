@@ -6,10 +6,10 @@ toc = document.getElementById( 'ToC' );
 tocList = document.createElement( 'ul' );
 tocList.className = 'is-style-arrow-list';
 
-// Get the h3 tags - ToC entries
-headers = document.getElementsByTagName( 'h3' );
+// Get the h2 tags - ToC entries
+headers = document.getElementsByTagName( 'h2' );
 
-// For each h3
+// For each h2
 for ( i = 0; i < headers.length; i++ ) {
 // Create an id
 	name = 'h' + i;

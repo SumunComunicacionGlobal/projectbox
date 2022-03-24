@@ -1,5 +1,11 @@
 ul, ol {
-	margin: 0;
+	margin: $space-1;
+	padding: 0;
+
+	li {
+		padding-bottom: $space-1;
+	}
+
 }
 
 ul {
@@ -8,9 +14,6 @@ ul {
 
 ol {
 	list-style: decimal;
-	li {
-		padding-bottom: $space__unit;
-	}
 }
 
 li > ul,
@@ -35,7 +38,6 @@ ul.is-style-arrow-list {
 	li {
 		display: flex;
 		align-items: center; 
-		padding-bottom: $space-4;
 	}
 
 	li:before{
@@ -44,5 +46,30 @@ ul.is-style-arrow-list {
 		height: .5rem;
 		width: .5rem;
 		padding-right: 1rem;
+	}
+}
+
+ol.is-style-numbers-list {
+	list-style: none;
+  	counter-reset: my-awesome-counter;
+
+	li {
+		position: relative;
+		counter-increment: my-awesome-counter;
+		margin-left: 24px;
+		
+		&:before {
+			content: counter(my-awesome-counter);
+			color: white;
+			position: absolute;
+			--size: 24px;
+			left: calc(-1 * var(--size) - 12px);
+			line-height: var(--size);
+			width: var(--size);
+			height: var(--size);
+			top: 0;
+			background: color(primary-60);
+			text-align: center;
+		}
 	}
 }

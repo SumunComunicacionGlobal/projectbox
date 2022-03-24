@@ -1,11 +1,11 @@
 /* COLORS */
 $primary-colors: (
     primary: #0020C1,
-    100: #202945,
-    80: #1D70B7,
-    60: #4984B7,
-    40: #6E95B7,
-    20: #92A6B7,
+    primary-100: #202945,
+    primary-80: #1D70B7,
+    primary-60: #4984B7,
+    primary-40: #6E95B7,
+    primary-20: #92A6B7,
 );
 
 $secondary-colors: (
@@ -40,7 +40,7 @@ $feedback-colors: (
 
 
 $background-colors: (
-    
+    white: white,
 );
 
 
@@ -61,7 +61,6 @@ $gutenbergColors: map-collect($primary-colors, $secondary-colors, $accent-colors
     @return map-get($allColors, $key);
     
 }
-
 
 /* Border radius */
 $border__radius: 24px;

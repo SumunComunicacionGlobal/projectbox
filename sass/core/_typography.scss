@@ -77,21 +77,6 @@ big {
 .big {
     font-size: 1.125rem;
 }
-
-.big-number {
-    font-size: 4rem;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1;
-    @include breakpoint(laptop) {
-		font-size: 3.2em;
-    }
-}
- 
-strong {
-    font-family: $font__heding;
-}
  
 svg.icon {
     fill: currentColor;
@@ -110,9 +95,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .text-h1  {
-	font-size: 3em;
+	font-size: 3.75em;
 	@include breakpoint(laptop) {
-		font-size: 2.5em;
+		font-size: 3em;
     }
     
     &.display {
@@ -123,35 +108,35 @@ h1, .text-h1  {
 }
 
 h2, .text-h2 {
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 2.5em;
+    font-weight: 100;
 	@include breakpoint(laptop) {
-		font-size: 1.8em;
+		font-size: 2em;
 	}
 }
 
 h3, .text-h3 {
-	font-size: 1.7em;
+	font-size: 2em;
+    font-weight: bold;
 	@include breakpoint(laptop) {
-		font-size: 1.5em;
+		font-size: 1.75em;
 	}
 }
 
 h4, .text-h4 {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 2em;
     @include breakpoint(laptop) {
-		font-size: 1.25em;
+		font-size: 1.75em;
 	}
 }
 
 h5, .text-h5 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
 h6, .text-h6 {
-    font-size: 1.125em;
+    font-size: 1.25em;
     font-weight: bold;
     
 }

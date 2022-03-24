@@ -27,31 +27,24 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			
-				
-			 ?>
+			<?php the_custom_logo(); ?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sumun' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="menu-container">     
+			<button class="menu-button btn btn--primary"><?php _e('Menu','fundacion-botin'); ?></button>
+			<div id="site-header-menu" class="site-header-menu">
+				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'fundacion-botin'); ?>">
+					<?php
+					wp_nav_menu(array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'depth'          => 4,
+						'container'      => false,
+						'has_dropdown'   => true,
+						));
+					?>
+				</nav>
+			</div>
+		</div><!-- #site-navigation -->
 	</header><!-- #masthead -->

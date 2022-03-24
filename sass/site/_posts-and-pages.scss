@@ -17,6 +17,20 @@
 		padding-right: $space-2;
 		border-right: 1px solid color(primary-20);
 
+		@include breakpoint(mobile) {
+			border-right: none;
+			padding-right: 0;
+		}
+
+	}
+
+	.header-contact {
+		@include breakpoint(mobile) {
+			text-align: right;
+			span {
+				display: none;
+			}
+		}
 	}
 
 	.site-main {

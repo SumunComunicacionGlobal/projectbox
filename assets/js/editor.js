@@ -11,5 +11,20 @@ wp.domReady( () => {
 			name: 'arrow-list',
 			label: 'List with arrow',
 		},
+		{
+			name: 'numbers-list',
+			label: 'List with numbers',
+		},
+	] );
+	wp.blocks.registerBlockStyle( 'core/group', [
+		{
+			name: 'default',
+			label: 'Default',
+			isDefault: true,
+		},
+		{
+			name: 'card-link',
+			label: 'Card with link',
+		},
 	] );
 } );

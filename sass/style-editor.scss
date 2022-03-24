@@ -13,7 +13,7 @@ html:where(.editor-styles-wrapper) {
 }
 
 .wp-block {
-    @include container;
+    max-width: 592px;
 }
 
 .wp-block[data-align="full"] {
