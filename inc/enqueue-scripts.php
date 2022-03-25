@@ -3,6 +3,8 @@
 function sumun_scripts() {
 	wp_enqueue_style( 'sumun-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	wp_enqueue_script( 'jquery' );
+
 	wp_enqueue_script( 'sumun-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'sumun-toc', get_template_directory_uri() . '/assets/js/toc.js', array(), _S_VERSION, true );

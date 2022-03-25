@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap');
-
+/* Estructura */
 @font-face {
-    font-family: 'MyWebFont';
-    src: url('webfont.eot'); /* IE9 Compat Modes */
-    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-         url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-         url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-family: 'BW Nista';
+    src: url('assets/fonts/BwNistaInt-Md.eot');
+    src: url('assets/fonts/BwNistaInt-Md.eot') format('embedded-opentype'),
+      url('assets/fonts/BwNistaInt-LtIt.woff2') format('woff2'),
+      url('assets/fonts/BwNistaInt-LtIt.woff') format('woff');
+   // src: url('../fonts/bwnista-medium.otf') format('opentype'); // used when developing fonts
+    font-weight: 400;
+    font-style: normal;
+  }
+   
+  @font-face {
+    font-family: 'BW Nista';
+    src: url('assets/fonts/BwNistaInt-Lt.eot');
+    src: url('assets/fonts/BwNistaInt-Lt.eot') format('embedded-opentype'),
+      url('assets/fonts/BwNistaInt-Lt.woff2') format('woff2'),
+      url('assets/fonts/BwNistaInt-Lt.woff') format('woff');
+   // src: url('../fonts/bwnista-light.otf') format('opentype'); // used when developing fonts
+    font-weight: 200;
+    font-style: normal;
+  }
+   
+  @font-face {
+    font-family: 'BW Nista';
+    src: url('assets/fonts/BwNistaInt-xBd.eot');
+    src: url('assets/fonts/BwNistaInt-xBd.eot') format('embedded-opentype'),
+      url('assets/fonts/BwNistaInt-xBd.woff2') format('woff2'),
+      url('assets/fonts/BwNistaInt-xBd.woff') format('woff');
+   // src: url('../fonts/bwnista-extrabold.otf') format('opentype'); // used when developing fonts
+    font-weight: bold;
+    font-style: normal;
   }
 
 /* COPY */
