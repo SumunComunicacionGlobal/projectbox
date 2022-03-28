@@ -3,15 +3,24 @@
     padding: $space-2;
     position: relative;
 
-    h2, h3, h4, h5, h6, p, ul, ol {
-        margin-bottom: 0;
+    &:hover {
+        border: 1px solid color(primary);
     }
 
     &::after {
-        content: url(./assets/icons/arrow-link.svg);
+        content: '';
+        background: url(./assets/icons/arrow-link.svg);
+        background-size: $space-3 $space-3;
+        width: $space-3;
+        height: $space-3;
         position: absolute;
         top: $space-1;
         right: $space-1;
+        z-index: 0;
+    }
+
+    a {
+        color: initial;
     }
 
     a::after {

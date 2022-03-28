@@ -1,11 +1,11 @@
-/* Estructura */
+/* Custom font BW Nista */
 @font-face {
     font-family: 'BW Nista';
     src: url('assets/fonts/BwNistaInt-Md.eot');
     src: url('assets/fonts/BwNistaInt-Md.eot') format('embedded-opentype'),
       url('assets/fonts/BwNistaInt-Md.woff2') format('woff2'),
       url('assets/fonts/BwNistaInt-Md.woff') format('woff');
-   // src: url('../fonts/bwnista-medium.otf') format('opentype'); // used when developing fonts
+    
     font-weight: 400;
     font-style: normal;
   }
@@ -16,7 +16,7 @@
     src: url('assets/fonts/BwNistaInt-Lt.eot') format('embedded-opentype'),
       url('assets/fonts/BwNistaInt-Lt.woff2') format('woff2'),
       url('assets/fonts/BwNistaInt-Lt.woff') format('woff');
-   // src: url('../fonts/bwnista-light.otf') format('opentype'); // used when developing fonts
+    
     font-weight: 200;
     font-style: normal;
   }
@@ -27,7 +27,7 @@
     src: url('assets/fonts/BwNistaInt-xBd.eot') format('embedded-opentype'),
       url('assets/fonts/BwNistaInt-xBd.woff2') format('woff2'),
       url('assets/fonts/BwNistaInt-xBd.woff') format('woff');
-   // src: url('../fonts/bwnista-extrabold.otf') format('opentype'); // used when developing fonts
+    
     font-weight: bold;
     font-style: normal;
   }
@@ -40,20 +40,19 @@ input,
 select,
 optgroup,
 textarea {
-color: color(body-main);
-font-family: $font__main;
-@include font-size(1);
-line-height: $font__line-height-body;
-
+    color: color(body-main);
+    font-family: $font__main;
+    @include font-size(1);
+    line-height: $font__line-height-body;
 }
 
 p {
-margin-bottom: 1.5rem;
-margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
 }
 
 dfn, cite, em, i {
-font-style: italic;
+    font-style: italic;
 }
 
 blockquote {
@@ -109,10 +108,10 @@ svg.icon {
  */
 
 h1, h2, h3, h4, h5, h6,
-.text-h2, .text-h3, .text-h4, .text-h5 {
+.text-h1, .text-h2, .text-h3, .text-h4, .text-h5 {
 	clear: both;
 	margin-top: 0;
-    font-family: $font__heding;
+    font-family: $font__heading;
     line-height: $font__line-height-header;
 }
 
@@ -123,7 +122,7 @@ h1, .text-h1  {
     }
     
     &.display {
-        font-weight: 100;
+        font-weight: 200;
         text-transform: uppercase;
         margin-bottom: $space-3;
     }
@@ -131,7 +130,7 @@ h1, .text-h1  {
 
 h2, .text-h2 {
     font-size: 2.5em;
-    font-weight: 100;
+    font-weight: 200;
 	@include breakpoint(laptop) {
 		font-size: 2em;
 	}

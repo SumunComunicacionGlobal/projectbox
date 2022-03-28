@@ -10,7 +10,6 @@
     }
 }
 
-
 /***
 An accessible menu for WordPress
 Based on https://github.com/argenteum/accessible-nav-wp
@@ -31,6 +30,7 @@ Based on https://github.com/argenteum/accessible-nav-wp
 
 .site-header-menu {
 	display: block;
+	overflow: auto;
 	
 	@include breakpoint(tablet) {
 		display: none;
@@ -141,5 +141,3 @@ button.menu-button {
 		flex: 1 0 50%;
 	}
 }
-
-

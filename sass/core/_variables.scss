@@ -43,7 +43,7 @@ $background-colors: (
     white: white,
 );
 
-
+// Function to merge all maps in a collection
 @function map-collect($maps...) {
     $collection: ();
   
@@ -56,10 +56,9 @@ $background-colors: (
 $allColors: map-collect($primary-colors, $secondary-colors, $accent-colors, $text-colors, $background-colors, $feedback-colors); 
 $gutenbergColors: map-collect($primary-colors, $secondary-colors, $accent-colors, $background-colors); 
 
-// Function to get a value from map. How to use: .class { color: color(primary) } 
+// Get a value from map. How to use: .class { color: color(primary) } 
 @function color($key) {
     @return map-get($allColors, $key);
-    
 }
 
 /* Border radius */
@@ -67,7 +66,7 @@ $border__radius: 24px;
 
 /* Fonts */
 $font__main: 'BW Nista', sans-serif;
-$font__heding: 'BW Nista', sans-serif;
+$font__heading: 'BW Nista', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
