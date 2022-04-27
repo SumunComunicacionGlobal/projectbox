@@ -28,6 +28,8 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php posts_nav_link(' — ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
+
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php

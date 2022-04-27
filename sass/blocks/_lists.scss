@@ -42,9 +42,12 @@ ul.is-style-arrow-list {
 
 	li:before{
 		display: inline-flex;
-		content: url('assets/icons/arrow-right.svg');
-		height: .5rem;
+		content: '';
+ 		background-image: url(assets/icons/arrow-right.svg);
+ 		background-size: contain;
+		background-repeat: no-repeat;
 		width: .5rem;
+		height: .5rem;
 		padding-right: 1rem;
 	}
 }

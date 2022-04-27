@@ -23,8 +23,29 @@ wp.domReady( () => {
 			isDefault: true,
 		},
 		{
+			name: 'card',
+			label: 'Card',
+		},
+		{
 			name: 'card-link',
 			label: 'Card with link',
 		},
 	] );
 } );
+
+/* ADD data space height to wp-block-spacer in gutenberg */
+wp.data.subscribe( function() {
+	setTimeout( function() {
+		const spacerBlocks = document.querySelectorAll( '.wp-block.wp-block-spacer' );
+
+		for ( let item = 0; item < spacerBlocks.length; item++ ) {
+			const block = spacerBlocks[ item ];
+
+			const style = getComputedStyle( block ),
+				height = parseInt( style.height ) || 0;
+
+			block.querySelector( '.components-resizable-box__container' ).setAttribute( 'data-spaceheight', height + 'px' );
+		}
+	}, 1 );
+} );
+

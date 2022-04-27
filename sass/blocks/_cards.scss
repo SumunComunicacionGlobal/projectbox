@@ -34,3 +34,7 @@
         bottom: 0;
     }
 }
+
+.wp-block-group.is-style-card:where(.has-background) {
+    padding: $space-6 $space-3;
+}
