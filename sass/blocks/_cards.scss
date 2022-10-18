@@ -38,3 +38,25 @@
 .wp-block-group.is-style-card:where(.has-background) {
     padding: $space-6 $space-3;
 }
+
+.is-style-card {
+    border-radius: $border__radius;
+    box-shadow: 0 16px 24px 0 rgba(50,50,50,0.06);
+    position: relative;
+    width: 100%;
+
+    &:hover {
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.10), 0 3px 14px 2px rgba(0,0,0,0.10), 0 5px 5px -3px rgba(0,0,0,0.20);
+    }
+
+    .card-img {
+        border-radius: $border__radius $border__radius 0 0;
+        img {
+            border-radius: $border__radius $border__radius 0 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-height: 12.75rem;
+        }
+    }
+}

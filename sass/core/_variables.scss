@@ -1,46 +1,38 @@
 /* COLORS */
 $primary-colors: (
-    primary: #0020C1,
-    primary-100: #202945,
-    primary-80: #1D70B7,
-    primary-60: #4984B7,
-    primary-40: #6E95B7,
-    primary-20: #92A6B7,
+    primary: #663399,
+    primary-100: #320055,
+    primary-80: #7E599C,
+    primary-60: #9F82B5,
+    primary-40: #BEACCE,
+    primary-20: #DFD5E6,
 );
 
 $secondary-colors: (
-    secondary: #FFAE0F,
-    secondary-100: #FFC25E,
-    secondary-80: #FFEC00,
-    secondary-60: #FFF466,
-    secondary-40: #FFF799,
-    secondary-20: #FFFBCC,
-);
-
-$accent-colors: (
-    accent-green: #93C01F,
-    accent-purple: #941B80,
-    accent-magenta: #D60B51,
-    accent-pink: #FFC5DF,
+    secondary: #c2185b,
 );
 
 $text-colors: (
-    body-main: #1A1A1A,
+    body-main: #212121,
     body-medium: #76787C,
-    body-link: #0020C1,
-    body-link--hover: #1D70B7,
+    body-link: #c2185b,
+    body-link--hover: #663399,
     body-white: white,
 );
 
 $feedback-colors: (
-    color-error: #FF0000,
-    color-warning: #FFD11C,
-    color-info: #3CB4FA,
+    color-error: #f5414f,
+    color-warning: #ffd137,
+    color-success: #88c459,
 );
 
 
 $background-colors: (
     white: white,
+    gray: #c4cdd5,
+    gray-dark: #949ba5,
+    ligth: #F7F4F9,
+    dark: #212121,
 );
 
 // Function to merge all maps in a collection
@@ -53,8 +45,8 @@ $background-colors: (
     @return $collection;
 }
 
-$allColors: map-collect($primary-colors, $secondary-colors, $accent-colors, $text-colors, $background-colors, $feedback-colors); 
-$gutenbergColors: map-collect($primary-colors, $secondary-colors, $accent-colors, $background-colors); 
+$allColors: map-collect($primary-colors, $secondary-colors, $text-colors, $background-colors, $feedback-colors); 
+$gutenbergColors: map-collect($primary-colors, $secondary-colors, $background-colors, $feedback-colors); 
 
 // Get a value from map. How to use: .class { color: color(primary) } 
 @function color($key) {
@@ -62,11 +54,11 @@ $gutenbergColors: map-collect($primary-colors, $secondary-colors, $accent-colors
 }
 
 /* Border radius */
-$border__radius: 24px;
+$border__radius: 6px;
 
 /* Fonts */
-$font__main: 'BW Nista', sans-serif;
-$font__heading: 'BW Nista', sans-serif;
+$font__main: 'Exo', sans-serif;
+$font__heading: 'Exo', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

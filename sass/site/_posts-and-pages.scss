@@ -8,7 +8,7 @@
 	  "site-header site-main site-main"
 	  "site-footer site-footer site-footer";
 
-	@include breakpoint(mobile) {
+	@include breakpoint(tablet) {
 		display: block;
 	}
   	
@@ -17,7 +17,7 @@
 		padding-right: $space-2;
 		border-right: 1px solid color(primary-20);
 
-		@include breakpoint(mobile) {
+		@include breakpoint(tablet) {
 			border-right: none;
 			padding-right: 0;
 		}
@@ -25,7 +25,7 @@
 	}
 
 	.header-contact {
-		@include breakpoint(mobile) {
+		@include breakpoint(tablet) {
 			text-align: right;
 			span {
 				display: none;

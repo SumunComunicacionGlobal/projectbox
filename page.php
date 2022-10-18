@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main mb-6">
 		<div class="row main-content">
 			<header class="col-xs-12 dflex between-xs middle-xs mt-3 mb-10">
 				<div><a href="https://sumun.net/"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo-sumun.png"></a></div>
@@ -32,7 +32,8 @@ get_header();
 			endwhile; // End of the loop.
 			?>
 
-			<aside class="col-xs-12 col-md-3">
+			<aside class="col-xs-12 col-md-3 col-md-offset-1">
+				<div><strong><small>Contenidos</small></strong></div>
 				<div id="ToC"></div>
 			</aside>
 

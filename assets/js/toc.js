@@ -3,7 +3,7 @@
 toc = document.getElementById( 'ToC' );
 
 // Get the h2 tags - ToC entries
-headers = document.getElementsByTagName( 'h2' );
+headers = document.getElementsByTagName( 'h3' );
 
 if ( headers ) {
 	// Create a list for the ToC entries
@@ -32,7 +32,7 @@ toc.appendChild( tocList );
 document.addEventListener( 'DOMContentLoaded', function() {
 	// grab the sections (targets) and menu_links (triggers)
 	// for menu items to apply active link styles to
-	const sections = document.querySelectorAll( 'h2' );
+	const sections = document.querySelectorAll( 'h3' );
 	const menuLinks = document.getElementById( 'ToC' );
 
 	// functions to add and remove the active class from links as appropriate

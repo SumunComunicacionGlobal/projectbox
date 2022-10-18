@@ -22,19 +22,19 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site container">
+<div id="page" class="site container-fluid">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sumun' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php the_custom_logo(); ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		<div class="site-branding mt-2">
+			<?php if (the_custom_logo()); ?>
+			
 		</div><!-- .site-branding -->
 
 		<div class="menu-container">     
-			<button class="menu-button btn btn--primary"><?php _e('Menu','fundacion-botin'); ?></button>
+			<button class="menu-button btn btn--primary"><?php _e('Menu','sumun'); ?></button>
 			<div id="site-header-menu" class="site-header-menu">
-				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'fundacion-botin'); ?>">
+				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'sumun'); ?>">
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'primary',

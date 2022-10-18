@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-sumun
+Sistema de diseño COIIAR
 ===
 
-Hola. Esto es el tema `sumun projectbox`, para ., está basado en el starter theme Underscores.
+Hola. Esto es el tema `sumun projectbox`, para COIIAR, está basado en el starter theme Underscores.
 
 Instalación
 ---------------

@@ -8,13 +8,13 @@
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/SumunComunicacionGlobal/projectbox#readme",
+  "homepage": "https://github.com/SumunComunicacionGlobal/coiiar-ds#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SumunComunicacionGlobal/projectbox.git"
+    "url": "git+https://github.com/SumunComunicacionGlobal/coiiar-ds.git"
   },
   "bugs": {
-    "url": "https://github.com/SumunComunicacionGlobal/projectbox/issues"
+    "url": "https://github.com/SumunComunicacionGlobal/coiiar-ds/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^6.2.0",
@@ -28,8 +28,8 @@
     "compile:editorcss": "node-sass sass/style-editor.scss -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'assets/js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../sumun.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock",
-    "sync": "browser-sync start --proxy 'http://localhost:8888/project-box/' --files ['**/*.php', '*.*']",
+    "bundle": "dir-archiver --src . --dest ../coiiar-ds.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock",
+    "sync": "browser-sync start --proxy 'http://localhost:8888/coiiar-DS/' --files ['**/*.php', '*.*']",
     "dev": "npm run watch & npm run sync"
   }
 }
