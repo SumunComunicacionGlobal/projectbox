@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
 
 	<?php wp_head(); ?>
 </head>
@@ -32,7 +34,7 @@
 		</div><!-- .site-branding -->
 
 		<div class="menu-container">     
-			<button class="menu-button btn btn--primary"><?php _e('Menu','sumun'); ?></button>
+			<button class="menu-button btn btn--primary"><span class="screen-reader-text"><?php _e('Menu','sumun'); ?></span></button>
 			<div id="site-header-menu" class="site-header-menu">
 				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'sumun'); ?>">
 					<?php

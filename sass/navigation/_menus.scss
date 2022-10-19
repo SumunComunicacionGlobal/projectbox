@@ -104,13 +104,14 @@ Based on https://github.com/argenteum/accessible-nav-wp
 /* Show menu-button on mobile */
 button.menu-button {
 	display: none;
+	background: color(primary);
+	padding: 0.65rem 1rem;
 
 	&::before{
-		content: "\2261";
-	}
-
-	&.toggled-on:before {
-		content: "\2212";
+		display: inline-flex;
+		content: url(assets/icons/align-right.svg);
+		width: 1.5rem;
+		height: 1.5rem;
 	}
 
 	@include breakpoint(tablet) {
