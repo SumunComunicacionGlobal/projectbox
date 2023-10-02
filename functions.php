@@ -24,9 +24,9 @@ function sumun_setup() {
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
 		* If you're building a theme based on Sumun, use a find and replace
-		* to change 'sumun' to the name of your theme in all the template files.
+		* to change 'projectbox' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'sumun', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'projectbox', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +49,7 @@ function sumun_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'sumun' ),
+			'menu-1' => esc_html__( 'Primary', 'projectbox' ),
 		)
 	);
 

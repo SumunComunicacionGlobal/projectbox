@@ -3,27 +3,27 @@
 // Adds support for editor color palette.
 add_theme_support( 'editor-color-palette', array(
 	array(
-		'name'  => __( 'Primary', 'sumun' ),
+		'name'  => __( 'Primary', 'projectbox' ),
 		'slug'  => 'primary',
 		'color'	=> '#244985',
 	),
 	array(
-		'name'  => __( 'Secondary', 'sumun' ),
+		'name'  => __( 'Secondary', 'projectbox' ),
 		'slug'  => 'secondary',
 		'color' => '#E45510',
 	),
 	array(
-		'name'  => __( 'Ligth', 'sumun' ),
+		'name'  => __( 'Ligth', 'projectbox' ),
 		'slug'  => 'ligth',
 		'color' => '#F4F5F7',
        ),
     array(
-		'name'  => __( 'Dark', 'sumun' ),
+		'name'  => __( 'Dark', 'projectbox' ),
 		'slug'  => 'dark',
 		'color' => '#101820',
        ),
 	array(
-		'name'  => __( 'White', 'sumun' ),
+		'name'  => __( 'White', 'projectbox' ),
 		'slug'  => 'white',
 		'color' => '#FFFFFF',
     ),   
