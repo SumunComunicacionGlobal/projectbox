@@ -1,37 +1,64 @@
-/* main colors */
-$color__primary: #244985;
-$color__secondary: #E45510;
-$color__white: #ffffff;
+/* COLORS */
+$primary-colors: (
+    primary: #663399,
+    primary-100: #320055,
+    primary-80: #7E599C,
+    primary-60: #9F82B5,
+    primary-40: #BEACCE,
+    primary-20: #DFD5E6,
+);
 
-/* primary colors */
-$color__primary-dark: #101820;
-$color__primary-80: #132645;
-$color__primary-60: #203352;
-$color__primary-40: #384E72;
-$color__primary-20: #DFD5E6;
+$secondary-colors: (
+    secondary: #c2185b,
+);
 
-/* text colors */
-$color__link: #E45510;
-$color__link-hover: #f5414f;
-$color__text-main: #101820;
+$text-colors: (
+    body-main: #212121,
+    body-medium: #76787C,
+    body-link: #c2185b,
+    body-link--hover: #663399,
+    body-white: white,
+);
 
-/* feedback */
-$color__success: #88c459;
-$color__error: #f5414f;
-$color__warning: #ffd137;
+$feedback-colors: (
+    color-error: #f5414f,
+    color-warning: #ffd137,
+    color-success: #88c459,
+);
 
-/* Backgrounds colors */
-$color__ligth: #F4F5F7;
-$color__gray: #c4cdd5;
-$color__gray-dark: #444;
 
+$background-colors: (
+    white: white,
+    gray: #c4cdd5,
+    gray-dark: #949ba5,
+    ligth: #F7F4F9,
+    dark: #212121,
+);
+
+// Function to merge all maps in a collection
+@function map-collect($maps...) {
+    $collection: ();
+  
+    @each $map in $maps {
+      $collection: map-merge($collection, $map);
+    }
+    @return $collection;
+}
+
+$allColors: map-collect($primary-colors, $secondary-colors, $text-colors, $background-colors, $feedback-colors); 
+$gutenbergColors: map-collect($primary-colors, $secondary-colors, $background-colors, $feedback-colors); 
+
+// Get a value from map. How to use: .class { color: color(primary) } 
+@function color($key) {
+    @return map-get($allColors, $key);
+}
 
 /* Border radius */
-$border__radius: 24px;
+$border__radius: 6px;
 
 /* Fonts */
-$font__main: 'IBM Plex Sans', sans-serif;
-$font__heding: 'IBM Plex Sans', sans-serif;
+$font__main: 'Exo', sans-serif;
+$font__heading: 'Exo', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
@@ -43,11 +70,20 @@ $font__line-height-pre: 1.6;
 $space__unit: 1rem;
 
 /* space scale */
-$space-xxs: calc(0.5 * #{$space__unit}); // 8px
-$space-xs: calc(1.5 * #{$space__unit}); // 24px
-$space-sm: calc(2 * #{$space__unit}); // 32px
-$space-md: calc(2.5 * #{$space__unit}); // 40px
-$space-lg: calc(3.5 * #{$space__unit}); // 56px
-$space-xl: calc(4 * #{$space__unit}); // 64px
-$space-xxl: calc(6 * #{$space__unit}); // 80px
-$space-xxxl: calc(8 * #{$space__unit}); // 96px
+$space-05: calc(0.5 * #{$space__unit}); // 8px
+$space-1: $space__unit; // 16px
+$space-2: calc(1.5 * #{$space__unit}); // 24px
+$space-3: calc(2 * #{$space__unit}); // 32px
+$space-4: calc(2.5 * #{$space__unit}); // 40px
+
+$space-5: calc(3.5 * #{$space__unit}); // 56px
+$space-6: calc(4 * #{$space__unit}); // 64px
+$space-7: calc(4.5 * #{$space__unit}); // 72px
+$space-8: calc(5 * #{$space__unit}); // 80px
+
+$space-9: calc(6 * #{$space__unit}); // 96px
+$space-10: calc(7 * #{$space__unit}); // 112px
+
+/* Layout, width and gap */
+$grid__gap: 2rem;
+$grid__gap-row: -$grid__gap;

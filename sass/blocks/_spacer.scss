@@ -1,0 +1,11 @@
+.components-resizable-box__container.block-library-spacer__resize-container {
+    background-color: color(primary-20);
+
+    &:before {
+        content: attr(data-spaceheight);
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}

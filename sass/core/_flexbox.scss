@@ -1,15 +1,12 @@
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  @include container;
 }
 
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: $grid__gap;
+  padding-left: $grid__gap;
 }
 
 .row {
@@ -26,8 +23,8 @@
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.75rem;
-  margin-left: -0.75rem;
+  margin-right: calc(0.5 * #{$grid__gap-row});
+  margin-left: calc(0.5 * #{$grid__gap-row});
 }
 
 .row.reverse {
@@ -78,8 +75,8 @@
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: calc(0.5 * #{$grid__gap});
+  padding-left: calc(0.5 * #{$grid__gap});
 }
 
 .col-xs {
@@ -273,10 +270,8 @@
   order: 1;
 }
 
+// 768px Tablet
 @media only screen and (min-width: 48em) {
-  .container {
-    width: 46rem;
-  }
 
   .col-sm,
   .col-sm-1,
@@ -308,8 +303,8 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: calc(0.5 * #{$grid__gap});
+    padding-left: calc(0.5 * #{$grid__gap});
   }
 
   .col-sm {
@@ -505,9 +500,6 @@
 }
 
 @media only screen and (min-width: 64em) {
-  .container {
-    width: 62rem;
-  }
 
   .col-md,
   .col-md-1,
@@ -539,8 +531,8 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: calc(0.5 * #{$grid__gap});
+    padding-left: calc(0.5 * #{$grid__gap});
   }
 
   .col-md {
@@ -736,9 +728,6 @@
 }
 
 @media only screen and (min-width: 80em) {
-  .container {
-    width: 72.250rem;
-  }
 
   .col-lg,
   .col-lg-1,
@@ -770,8 +759,8 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right: calc(0.5 * #{$grid__gap});
+    padding-left: calc(0.5 * #{$grid__gap});
   }
 
   .col-lg {
@@ -963,11 +952,5 @@
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-  }
-}
-
-@media only screen and (min-width: 91em) {
-  .container {
-    width: 88rem;
   }
 }

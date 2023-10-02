@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-sumun
+Sistema de diseño COIIAR
 ===
 
-Hola. Esto es el tema `sumun`, para Grupo sumun S.L., está basado en el starter theme Underscores.
+Hola. Esto es el tema `sumun projectbox`, para COIIAR, está basado en el starter theme Underscores.
 
 Instalación
 ---------------
@@ -17,7 +17,7 @@ Instalación
 
 ### Cómo empezar
 
-Clona o descarga este repositorio `$ git clone https://github.com/SumunComunicacionGlobal/sumun-wp` en tu carpeta de themes.
+Clona o descarga este repositorio `$ git clone https://github.com/SumunComunicacionGlobal/projectbox` en tu carpeta de themes.
 
 ### Setup
 

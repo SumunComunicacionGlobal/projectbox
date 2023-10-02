@@ -1,0 +1,78 @@
+ul, ol {
+	margin: $space-1;
+	padding: 0;
+
+	li {
+		padding-bottom: $space-1;
+	}
+
+}
+
+ul {
+	list-style: square;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: $space__unit;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 $space__unit $space__unit;
+}
+
+ul.is-style-arrow-list {
+	list-style: none;
+	position: relative;
+	padding: 0;
+
+	li {
+		display: flex;
+		align-items: center; 
+	}
+
+	li:before{
+		display: inline-flex;
+		content: '';
+ 		background-image: url(assets/icons/arrow-right.svg);
+ 		background-size: contain;
+		background-repeat: no-repeat;
+		width: .5rem;
+		height: .5rem;
+		padding-right: 1rem;
+	}
+}
+
+ol.is-style-numbers-list {
+	list-style: none;
+  	counter-reset: my-awesome-counter;
+
+	li {
+		position: relative;
+		counter-increment: my-awesome-counter;
+		margin-left: 24px;
+		
+		&:before {
+			content: counter(my-awesome-counter);
+			color: white;
+			position: absolute;
+			--size: 24px;
+			left: calc(-1 * var(--size) - 12px);
+			line-height: var(--size);
+			width: var(--size);
+			height: var(--size);
+			top: 0;
+			background: color(primary-60);
+			text-align: center;
+		}
+	}
+}

@@ -9,11 +9,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-xs-12 col-md-8'); ?>>
 
-	<?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
-
-	<?php sumun_post_thumbnail(); ?>
+	<header class="entry-header">	
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
@@ -27,6 +27,8 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+
+	<?php posts_nav_link(' — ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

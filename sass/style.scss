@@ -38,12 +38,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "components/accessibility";
 @import "components/buttons";
-@import "components/captions";
-@import "components/cards";
-@import "components/elements";
+@import "components/clearings";
 @import "components/fields";
-@import "components/galleries";
-@import "components/lists";
 @import "components/media";
 @import "components/tables";
 
@@ -62,7 +58,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Site
 --------------------------------------------------------------*/
-@import "site/background-colors";
+
 @import "site/hero";
 @import "site/posts-and-pages";
 @import "site/footer";

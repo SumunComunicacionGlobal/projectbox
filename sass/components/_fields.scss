@@ -15,25 +15,25 @@ input[type="datetime-local"],
 input[type="color"],
 select,
 textarea {
-	color: $color__text-main;
+	color: color(body-main);
 	border-radius: 4px;
-	padding: $space-xxs;
+	padding: $space-05;
 	width: 100%;
-	background-color: $color__gray;
-	border: solid 1px $color__gray;
+	background-color: color(primary);
+	border: solid 1px color(primary);
 
 	&:focus {
-		color: $color__primary-dark;
-		border: solid 1px $color__primary;
+		color: color(primary)-dark;
+		border: solid 1px color(primary);
 	}
 
 	&.error {
-		border: 1px solid $color__error;
+		border: 1px solid color(color-error);
 	}
 }
 
 span.error {
-	color: $color__error;
+	color: color(color-error);
 }
 
 input[type="submit"] {
