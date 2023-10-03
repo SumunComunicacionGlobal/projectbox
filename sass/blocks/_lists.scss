@@ -30,7 +30,8 @@ dd {
 	margin: 0 $space__unit $space__unit;
 }
 
-ul.is-style-arrow-list {
+ul.is-style-arrow-list,
+ul.wp-block-list {
 	list-style: none;
 	position: relative;
 	padding: 0;
@@ -52,7 +53,8 @@ ul.is-style-arrow-list {
 	}
 }
 
-ol.is-style-numbers-list {
+ol.is-style-numbers-list,
+ol.wp-block-list {
 	list-style: none;
   	counter-reset: my-awesome-counter;
 
