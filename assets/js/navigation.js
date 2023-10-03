@@ -49,6 +49,7 @@ Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
 
 	// Adds a class to sub-menus for styling
 	$( '.sub-menu .menu-item-has-children' ).parent( '.sub-menu' ).addClass( 'has-sub-menu' );
+	$( '.menu-item-has-children.current-menu-ancestor > .dropdown-toggle').addClass('toggled-on')
 
 	// Toggles the sub-menu when dropdown toggle button clicked
 	siteHeaderMenu.find( '.dropdown-toggle' ).click( function( e ) {

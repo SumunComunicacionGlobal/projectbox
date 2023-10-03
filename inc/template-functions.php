@@ -192,3 +192,56 @@ function smn_pdf_links_new_tab(){
 	
 	<?php
 }
+
+function smn_default_menu() {
+
+	echo '<ul id="primary-menu" class="menu">';
+    
+	wp_list_pages( array(
+		'depth'			=> 4,
+		'title_li'		=> null,
+		'walker'		=> new Custom_Walker_Page(),
+	));
+
+	echo '</ul>';
+
+}
+
+class Custom_Walker_Page extends Walker_Page {
+    // Modificar la salida para cada elemento de página
+    public function start_lvl(&$output, $depth = 0, $args = null) {
+		$menu_class = 'sub-menu';
+		$id = '';
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul ". $id ." class='". $menu_class ."'>\n";
+    }
+
+    public function end_lvl(&$output, $depth = 0, $args = null) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>\n";
+    }
+
+    public function start_el(&$output, $page, $depth = 0, $args = null, $current_page = 0) {
+        if ( $depth ) {
+            $indent = str_repeat("\t", $depth);
+        } else {
+            $indent = '';
+        }
+
+		$css_class = '';
+
+		$children = get_pages('child_of=' . $page->ID);
+		$ancestors = get_post_ancestors( $current_page );
+
+        $css_class .= empty( $page->post_parent ) ? ' parent' : ' child';
+		if ( $children ) $css_class .= ' menu-item-has-children';
+		if ( $current_page == $page->ID ) $css_class .= ' current-menu-item';
+		if ( in_array( $page->ID, $ancestors ) ) $css_class .= ' current-menu-ancestor';
+
+        $output .= $indent . '<li class="menu-item' . $css_class . '"><a href="' . get_permalink( $page->ID ) . '">' . esc_html( $page->post_title ) . '</a>';
+    }
+
+    public function end_el(&$output, $page, $depth = 0, $args = null) {
+        $output .= "</li>\n";
+    }
+}

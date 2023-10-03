@@ -44,6 +44,7 @@
 						'depth'          => 4,
 						'container'      => false,
 						'has_dropdown'   => true,
+						'fallback_cb'	 => 'smn_default_menu',
 						));
 					?>
 				</nav>

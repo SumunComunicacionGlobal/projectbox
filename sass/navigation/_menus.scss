@@ -99,6 +99,10 @@ Based on https://github.com/argenteum/accessible-nav-wp
 		color: color(primary);
 	}
 
+	.current-menu-ancestor > .sub-menu {
+		display: block;
+	} 
+
 }
   
 /* Show menu-button on mobile */
