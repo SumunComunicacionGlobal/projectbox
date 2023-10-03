@@ -169,3 +169,26 @@ function smn_breadcrumb() {
 	  }
 
 }
+
+add_action('wp_footer', 'smn_pdf_links_new_tab');
+function smn_pdf_links_new_tab(){
+	?>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$("a").each(function(){
+				if(
+					this.href.indexOf(location.hostname) == -1 ||
+					this.href.indexOf(".pdf") !== -1
+				) {
+					$(this).attr({
+						target: "_blank",
+						title: "Nueva pestaña"
+					});
+				}
+			})
+		});
+	</script>';
+	
+	<?php
+}
