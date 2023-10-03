@@ -119,9 +119,9 @@ function paginas_hijas( $atts ) {
 					
 					$query->the_post();
 					if ($current_post_id == get_the_ID()) {
-						$r .= '<span class="btn btn-primary btn-sm mr-2 mb-2">'.get_the_title().'</span>';
+						$r .= '<span class="btn mr-2 mb-2" disabled>'.get_the_title().'</span>';
 					} else {
-						$r .= '<a class="btn btn-primary btn-sm mr-2 mb-2" href="'.get_permalink( get_the_ID() ).'" title="'.get_the_title().'" role="button" aria-pressed="false">'.get_the_title().'</a>';
+						$r .= '<a class="btn has-primary-background-color has-white-color mr-2 mb-2" href="'.get_permalink( get_the_ID() ).'" title="'.get_the_title().'" role="button" aria-pressed="false">'.get_the_title().'</a>';
 					}
 				}
 
