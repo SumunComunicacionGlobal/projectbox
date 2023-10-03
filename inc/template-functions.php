@@ -71,6 +71,8 @@ function paginas_hijas( $atts ) {
 
 			$r .= '<div class="paginas-hijas">';
 
+				$r .= '<p class="text-h4">' . __( 'Ver más:', 'sumun' ) . '</p>';
+
 				// $r .= '<div class="wp-block-columns is-layout-flex">';
 
 				while($query->have_posts() ) { $query->the_post();
