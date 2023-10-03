@@ -1,16 +1,16 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-Sistema de diseño COIIAR
+Project Box WP Theme
 ===
 
-Hola. Esto es el tema `sumun projectbox`, para COIIAR, está basado en el starter theme Underscores.
+Hola. Esto es el tema `projectbox`, para Sumun, está basado en el starter theme Underscores.
 
 Instalación
 ---------------
 
 ### Requirimientos
 
-`sumun` solo requiere estas dependencias:
+`projectbox` solo requiere estas dependencias:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
@@ -21,7 +21,7 @@ Clona o descarga este repositorio `$ git clone https://github.com/SumunComunicac
 
 ### Setup
 
-Para empezar a usar todas las herramientas del tema `sumun` necesitas instalar las dependencias de Node.js y Composer :
+Para empezar a usar todas las herramientas del tema `projectbox` necesitas instalar las dependencias de Node.js y Composer :
 
 ```sh
 $ composer install
@@ -30,7 +30,7 @@ $ npm install
 
 ### Comandos CLI disponibles
 
-`sumun` está preparado para el desarollo de la plantilla para WordPress :
+`projectbox` está preparado para el desarollo de la plantilla para WordPress :
 
 - `composer lint:wpcs` : comprueba todos los archivos PHP con [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
 - `composer lint:php` : comprueba todos los archivos PHP en busca de errores de sintaxis.
