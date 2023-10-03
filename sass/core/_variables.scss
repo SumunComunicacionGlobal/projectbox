@@ -57,8 +57,8 @@ $gutenbergColors: map-collect($primary-colors, $secondary-colors, $background-co
 $border__radius: 6px;
 
 /* Fonts */
-$font__main: 'Exo', sans-serif;
-$font__heading: 'Exo', sans-serif;
+$font__main: 'BW Nista', sans-serif;
+$font__heading: 'BW Nista', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
@@ -87,3 +87,8 @@ $space-10: calc(7 * #{$space__unit}); // 112px
 /* Layout, width and gap */
 $grid__gap: 2rem;
 $grid__gap-row: -$grid__gap;
+
+:root {
+    --font__main: #{$font__main};
+    --font__heading: #{$font__heading};
+}

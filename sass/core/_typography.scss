@@ -1,3 +1,37 @@
+@font-face {
+    font-family: 'BW Nista';
+    src: url("assets/fonts/BwNistaInt-Md.eot");
+    src: url("assets/fonts/BwNistaInt-Md.eot") format("embedded-opentype"),
+    url("assets/fonts/BwNistaInt-Md.woff2") format("woff2"),
+    url("assets/fonts/BwNistaInt-Md.woff") format("woff");
+    display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'BW Nista';
+    src: url("assets/fonts/BwNistaInt-Lt.eot");
+    src: url("assets/fonts/BwNistaInt-Lt.eot") format("embedded-opentype"),
+    url("assets/fonts/BwNistaInt-Lt.woff2") format("woff2"),
+    url("assets/fonts/BwNistaInt-Lt.woff") format("woff");
+    display: swap;
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'BW Nista';
+    src: url("assets/fonts/BwNistaInt-xBd.eot");
+    src: url("assets/fonts/BwNistaInt-xBd.eot") format("embedded-opentype"),
+    url("assets/fonts/BwNistaInt-xBd.woff2") format("woff2"),
+    url("assets/fonts/BwNistaInt-xBd.woff") format("woff");
+    display: swap;
+    font-weight: 700;
+    font-style: normal
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
 /* COPY */
@@ -9,7 +43,7 @@ select,
 optgroup,
 textarea {
     color: color(body-main);
-    font-family: $font__main;
+    font-family: var(--font__main);
     @include font-size(1.125);
     line-height: $font__line-height-body;
      @include breakpoint(laptop) {
@@ -82,7 +116,7 @@ h1, h2, h3, h4, h5, h6,
 .text-h1, .text-h2, .text-h3, .text-h4, .text-h5 {
 	clear: both;
 	margin-top: 0;
-    font-family: $font__heading;
+    font-family: var(--font-heading);
     line-height: $font__line-height-header;
 }
 

@@ -1,7 +1,28 @@
 <?php 
 
 function sumun_scripts() {
-	wp_enqueue_style( 'sumun-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	$google_fonts = get_theme_mod( 'cliente_font_script' );
+	
+	if ( $google_fonts ) {
+		echo $google_fonts;
+		$font_main = get_theme_mod( 'cliente_font_main' );
+		$font_heading = get_theme_mod( 'cliente_font_heading' );
+		?>
+
+		<style>
+			:root {
+				<?php if ( $font_main ) echo '--font__main: ' . $font_main; ?>
+				<?php if ( $font_heading ) echo '--font__main: ' . $font_heading; ?>
+			}
+
+		</style>
+
+		<?php
+		
+	}
+
+	wp_enqueue_style( 'sumun-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version') );
 
 	wp_enqueue_script( 'jquery' );
 

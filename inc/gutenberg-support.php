@@ -51,15 +51,15 @@ add_action('after_setup_theme', function ()
     }
     if ( $colour_palette )
     {
-        add_theme_support( 'disable-custom-colors' );
+        // add_theme_support( 'disable-custom-colors' );
         add_theme_support( 'editor-color-palette', $colour_palette );    
     }
 
 }, 20);
 
 // Disables custom colors in block color palette.
-add_theme_support( 'disable-custom-colors' );
-add_theme_support( 'disable-custom-gradients' );
+// add_theme_support( 'disable-custom-colors' );
+// add_theme_support( 'disable-custom-gradients' );
 
 // Add support for Block Styles.
 add_theme_support( 'wp-block-styles' );

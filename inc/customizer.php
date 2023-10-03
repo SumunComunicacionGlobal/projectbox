@@ -31,6 +31,57 @@ function sumun_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+    // Añade una nueva sección llamada "Ajustes del cliente"
+	$wp_customize->add_section('cliente_settings_section', array(
+        'title' => __('Ajustes del cliente', 'projectbox'), // Puedes cambiar 'tu-textdomain' por el dominio de tu tema o plugin
+        'priority' => 200, // Puedes ajustar la prioridad según tus necesidades
+    ));
+
+	// Añade un campo de email de contacto dentro del panel
+	$wp_customize->add_setting('cliente_email', array(
+		'default' => '',
+		'sanitize_callback' => 'sanitize_email',
+	));
+
+	$wp_customize->add_control('cliente_email', array(
+		'label' => __('Email de contacto', 'projectbox'), // Puedes cambiar 'tu-textdomain' por el dominio de tu tema o plugin
+		'section' => 'cliente_settings_section',
+		'type' => 'email',
+	));
+
+	$wp_customize->add_setting('cliente_font_script', array(
+		'default' => '',
+	));
+
+	$wp_customize->add_control('cliente_font_script', array(
+		'label' => __('Código de Google Fonts', 'projectbox'), // Puedes cambiar 'tu-textdomain' por el dominio de tu tema o plugin
+		'description' => __( 'Pega aquí el código completo de inserción que te da Google Fonts (<link rel="preconnect">...', 'projectbox' ),
+		'section' => 'cliente_settings_section',
+		'type' => 'textarea',
+	));
+
+	$wp_customize->add_setting('cliente_font_main', array(
+		'default' => '',
+	));
+
+	$wp_customize->add_control('cliente_font_main', array(
+		'label' => __('Nombre de la tipografía de Google para el cuerpo', 'projectbox'), // Puedes cambiar 'tu-textdomain' por el dominio de tu tema o plugin
+		'section' => 'cliente_settings_section',
+		'type' => 'text',
+	));
+
+	$wp_customize->add_setting('cliente_font_heading', array(
+		'default' => '',
+	));
+	
+	$wp_customize->add_control('cliente_font_heading', array(
+		'label' => __('Nombre de la tipografía de Google para los encabezados', 'projectbox'), // Puedes cambiar 'tu-textdomain' por el dominio de tu tema o plugin
+		'section' => 'cliente_settings_section',
+		'type' => 'text',
+	));
+
+
 }
 add_action( 'customize_register', 'sumun_customize_register' );
 
