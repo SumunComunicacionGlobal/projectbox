@@ -8,13 +8,13 @@
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/SumunComunicacionGlobal/coiiar-ds#readme",
+  "homepage": "https://github.com/SumunComunicacionGlobal/projectbox#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SumunComunicacionGlobal/coiiar-ds.git"
+    "url": "git+https://github.com/SumunComunicacionGlobal/projectbox.git"
   },
   "bugs": {
-    "url": "https://github.com/SumunComunicacionGlobal/coiiar-ds/issues"
+    "url": "https://github.com/SumunComunicacionGlobal/projectbox/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^6.2.0",

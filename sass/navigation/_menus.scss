@@ -2,6 +2,10 @@
     position: sticky;
     top: $space-3;
 
+	> ul {
+		margin-left: 0;
+	}
+
     a {
         color: color(body-main);
 		@include font-size(1);
@@ -9,6 +13,22 @@
             color: color(body-link);
         }
     }
+
+	.toc-H3 {
+		padding-left: $space-1;
+	}
+
+	.toc-H4 {
+		padding-left: $space-2;
+	}
+
+	.toc-H5 {
+		padding-left: $space-3;
+	}
+
+	.toc-H6 {
+		padding-left: $space-4;
+	}
 }
 
 /***
