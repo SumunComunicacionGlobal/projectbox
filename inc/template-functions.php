@@ -190,7 +190,7 @@ function smn_pdf_links_new_tab(){
 				}
 			})
 		});
-	</script>';
+	</script>
 	
 	<?php
 }
