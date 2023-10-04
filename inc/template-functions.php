@@ -64,7 +64,7 @@ function paginas_hijas( $atts ) {
 		}
 
 		$r = '';
-		$texto_ver_mas = '<p class="text-h4">' . __( 'Ver más:', 'sumun' ) . '</p>';
+		$texto_ver_mas = '<p class="text-h3">' . __( 'Ver más:', 'sumun' ) . '</p>';
 
 
 		$query = new WP_Query($args);
