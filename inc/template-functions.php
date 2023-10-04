@@ -64,6 +64,8 @@ function paginas_hijas( $atts ) {
 		}
 
 		$r = '';
+		$texto_ver_mas = '<p class="text-h4">' . __( 'Ver más:', 'sumun' ) . '</p>';
+
 
 		$query = new WP_Query($args);
 
@@ -71,7 +73,7 @@ function paginas_hijas( $atts ) {
 
 			$r .= '<div class="paginas-hijas">';
 
-				$r .= '<p class="text-h4">' . __( 'Ver más:', 'sumun' ) . '</p>';
+				$r .= $texto_ver_mas;
 
 				// $r .= '<div class="wp-block-columns is-layout-flex">';
 
@@ -114,6 +116,8 @@ function paginas_hijas( $atts ) {
 			if ($query->have_posts() && $query->found_posts > 1 ) {
 
 				$r .= '<div class="paginas-hijas">';
+
+				$r .= $texto_ver_mas;
 
 				while($query->have_posts() ) {
 					
