@@ -9,7 +9,7 @@
 	}
 
 	&:visited, &:focus {
-		color: currentColor;
+		// color: currentColor;
 	}
 }
 
@@ -19,4 +19,8 @@
 	&:hover {
 		color: inherit;
 	}
+}
+
+.wp-block-button__link {
+	background-color: color(primary);
 }
