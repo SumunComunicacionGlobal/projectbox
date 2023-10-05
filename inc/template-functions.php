@@ -46,6 +46,8 @@ function paginas_hijas( $atts ) {
 		), $atts)	
 	);
 
+	$r = '';
+
 	global $post;
 
 	if ( is_post_type_hierarchical( $post->post_type ) /*&& '' == $post->post_content */) {
@@ -61,10 +63,38 @@ function paginas_hijas( $atts ) {
 
 		if ( $id ) {
 			$args['post_parent'] = $id;
+		} elseif( is_front_page() ) {
+			$args['post_parent'] = 0;
 		}
 
-		$r = '';
-		$texto_ver_mas = '<p class="text-h3">' . __( 'Ver más:', 'sumun' ) . '</p>';
+		if ( is_front_page() ) {
+
+			$r .= '<div class="paginas-hijas">';
+
+				$r .= '<div class="main-navigation">';
+
+					$r .= '<p class="text-h2">' . __( 'Contenido:', 'sumun' ) . '</p>';
+
+					$r .= '<ul class="menu">';
+
+						$page_list_args = array(
+							'title_li'		=> null,
+							'echo'			=> 0,
+							'walker'		=> new Custom_Walker_Page(),
+						);
+
+						$r .= wp_list_pages( $page_list_args );
+
+					$r .= '</ul>';
+
+				$r .= '</div>';
+
+			$r .= '</div>';
+
+			return $r;
+		}
+
+		$texto_ver_mas = '<p class="text-h2">' . __( 'Ver más:', 'sumun' ) . '</p>';
 
 
 		$query = new WP_Query($args);
@@ -107,7 +137,7 @@ function paginas_hijas( $atts ) {
 
 			$r .= '</div>';
 
-		} elseif( 0 != $post->post_parent ) {
+		} else {
 			wp_reset_postdata();
 			$current_post_id = get_the_ID();
 			$args['post_parent'] = $post->post_parent;
@@ -138,6 +168,7 @@ function paginas_hijas( $atts ) {
 
 		return $r;
 	}
+
 }
 add_shortcode( 'paginas_hijas', 'paginas_hijas' );
 
