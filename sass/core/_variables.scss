@@ -1,28 +1,37 @@
 /* COLORS */
+$dark:          #212121;
+$primary:       $dark;
+$secondary:     #0020C1;
+$tertiary:      #FFEC00;
+
 $primary-colors: (
-    primary: #663399,
-    primary-100: #320055,
-    primary-80: #7E599C,
-    primary-60: #9F82B5,
-    primary-40: #BEACCE,
-    primary-20: #DFD5E6,
+    primary: $primary,
+    primary-100: #000000,
+    primary-80: #76787C,
+    primary-60: #adb5bd,
+    primary-40: #dee2e6,
+    primary-20: #e9ecef,
 );
 
 $secondary-colors: (
-    secondary: #c2185b,
+    secondary: $secondary,
+);
+
+$tertiary-colors: (
+    tertiary: $tertiary,
 );
 
 $text-colors: (
-    body-main: #212121,
+    body-main: $dark,
     body-medium: #76787C,
-    body-link: #c2185b,
-    body-link--hover: #663399,
+    body-link: #0020C1,
+    body-link--hover: #0020C1,
     body-white: white,
 );
 
 $feedback-colors: (
     color-error: #f5414f,
-    color-warning: #ffd137,
+    color-warning: #FFEC00,
     color-success: #88c459,
 );
 
@@ -31,8 +40,12 @@ $background-colors: (
     white: white,
     gray: #c4cdd5,
     gray-dark: #949ba5,
-    ligth: #F7F4F9,
-    dark: #212121,
+    light: #F7F4F9,
+    dark: $dark,
+);
+
+$white-colors: (
+    white: white,
 );
 
 // Function to merge all maps in a collection
@@ -45,8 +58,19 @@ $background-colors: (
     @return $collection;
 }
 
-$allColors: map-collect($primary-colors, $secondary-colors, $text-colors, $background-colors, $feedback-colors); 
-$gutenbergColors: map-collect($primary-colors, $secondary-colors, $background-colors, $feedback-colors); 
+$allColors: map-collect($primary-colors, $secondary-colors, $tertiary-colors, $text-colors, $background-colors, $feedback-colors); 
+// $gutenbergColors: map-collect($primary-colors, $white-colors, $secondary-colors, $tertiary-colors); 
+$gutenbergColors: (
+    primary: var(--smn--color--primary),
+    primary-100: var(--smn--color--primary-100),
+    primary-80: var(--smn--color--primary-80),
+    primary-60: var(--smn--color--primary-60),
+    primary-40: var(--smn--color--primary-40),
+    primary-20: var(--smn--color--primary-20),
+    white: var(--smn--color--white),
+    secondary: var(--smn--color--secondary),
+    tertiary: var(--smn--color--tertiary),
+);
 
 // Get a value from map. How to use: .class { color: color(primary) } 
 @function color($key) {
@@ -89,6 +113,27 @@ $grid__gap: 2rem;
 $grid__gap-row: -$grid__gap;
 
 :root {
-    --font__main: #{$font__main};
-    --font__heading: #{$font__heading};
+    --smn--font__main: #{$font__main};
+    --smn--font__heading: #{$font__heading};
+    --smn--color--primary: #{color(primary)};
+    --smn--color--primary-100: #{color(primary-100)};
+    --smn--color--primary-80: #{color(primary-80)};
+    --smn--color--primary-60: #{color(primary-60)};
+    --smn--color--primary-40: #{color(primary-40)};
+    --smn--color--primary-20: #{color(primary-20)};
+    --smn--color--secondary: #{color(secondary)};
+    --smn--color--tertiary: #{color(tertiary)};
+    --smn--color--body-main: #{color(body-main)};
+    --smn--color--body-medium: #{color(body-medium)};
+    --smn--color--body-link: #{color(body-link)};
+    --smn--color--body-link--hover: #{color(body-link--hover)};
+    --smn--color--body-white: #{color(body-white)};
+    --smn--color--error: #{color(color-error)};
+    --smn--color--warning: #{color(color-warning)};
+    --smn--color--success: #{color(color-success)};
+    --smn--color--white: #{color(white)};
+    --smn--color--gray: #{color(gray)};
+    --smn--color--gray-dark: #{color(gray-dark)};
+    --smn--color--light: #{color(light)};
+    --smn--color--dark: #{color(dark)};
 }

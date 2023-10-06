@@ -3,7 +3,7 @@
 toc = document.getElementById( 'ToC' );
 
 // Get the h2 tags - ToC entries
-headers = document.querySelectorAll('h2,h3');
+headers = document.querySelectorAll('h2');
 
 if ( headers ) {
 	// Create a list for the ToC entries

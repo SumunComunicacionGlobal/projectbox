@@ -24,12 +24,12 @@ input[type="submit"] {
 /* feedback */
 .btn[disabled] {
 	cursor: not-allowed;
-	background-color: color(primary);
-	color: color(body-white);
+	background-color: var(--smn--color--primary);
+	color: var(--smn--color--body-white);
 	box-shadow: none;
-	opacity: 0.6;
+	opacity: 0.1;
 
 	&:visited {
-		color: color(secondary);
+		color: var(--smn--color--secondary);
 	}
 }

@@ -1,11 +1,11 @@
 .wp-block-quote {
 	margin-top: $space-6;
 	margin-bottom: $space-6;
-	border-color: color(primary);
+	border-color: var(--smn--color--primary);
 	
 	p {
 		margin-bottom: .5em;
-		font-size: 2rem;
+		font-size: 1.25rem;
 	}
 	
 	cite {

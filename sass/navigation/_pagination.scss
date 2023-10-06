@@ -7,8 +7,8 @@
         display: flex;
 
         a, span {
-            background-color: color(body-link);
-            color: color(body-white);
+            background-color: var(--smn--color--body-link);
+            color: var(--smn--color--body-white);
             padding: $space-05;
             border-radius: 100%;
             width: $space-4;
@@ -25,8 +25,8 @@
         }
 
         & span.current{
-            background-color: color(primary);
-            color: color(primary-60);
+            background-color: var(--smn--color--primary);
+            color: var(--smn--color--primary-60);
         }
     }
 
@@ -35,12 +35,12 @@
         display: block;
         padding: .5rem .75rem;
         line-height: 1.25;
-        color: color(body-white);
+        color: var(--smn--color--body-white);
         
         &:hover {
-            background-color: color(body-link);
+            background-color: var(--smn--color--body-link);
             border-radius: $border__radius;
-            color: color(body-white);
+            color: var(--smn--color--body-white);
         }
     }
 }

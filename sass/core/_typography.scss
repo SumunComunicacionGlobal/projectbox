@@ -42,8 +42,8 @@ input,
 select,
 optgroup,
 textarea {
-    color: color(body-main);
-    font-family: var(--font__main);
+    color: var(--smn--color--body-main);
+    font-family: var(--smn--font__main);
     @include font-size(1.125);
     line-height: $font__line-height-body;
      @include breakpoint(laptop) {
@@ -72,7 +72,7 @@ address {
 }
 
 pre {
-    background: color(primary-20);
+    background: var(--smn--color--primary-20);
     font-family: $font__pre;
     @include font-size(0.9375);
     line-height: $font__line-height-pre;
@@ -88,12 +88,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-    border-bottom: 1px dotted color(primary-20);
+    border-bottom: 1px dotted var(--smn--color--primary-20);
     cursor: help;
 }
 
 mark, ins {
-    background: color(primary-20);
+    background: var(--smn--color--primary-20);
     text-decoration: none;
 }
 
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6,
 .text-h1, .text-h2, .text-h3, .text-h4, .text-h5 {
 	clear: both;
 	margin-top: 0;
-    font-family: var(--font-heading);
+    font-family: var(--smn--font__heading);
     line-height: $font__line-height-header;
 }
 
@@ -166,7 +166,7 @@ h5, .text-h5 {
 h6, .text-h6 {
     text-transform: uppercase;
     font-weight: bold;
-    color: color(primary);
+    color: var(--smn--color--primary);
     
 }
 

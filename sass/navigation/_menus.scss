@@ -7,10 +7,10 @@
 	}
 
     a {
-        color: color(body-main);
+        color: var(--smn--color--body-main);
 		@include font-size(1);
         &:hover {
-            color: color(body-link);
+            color: var(--smn--color--body-link);
         }
     }
 
@@ -76,9 +76,9 @@ Based on https://github.com/argenteum/accessible-nav-wp
         }
     
         a {
-            color: color(body-main);
+            color: var(--smn--color--body-main);
             display: block;
-            &:hover { color: color(primary); }
+            &:hover { color: var(--smn--color--primary); }
         }
 	}
 
@@ -120,7 +120,7 @@ Based on https://github.com/argenteum/accessible-nav-wp
 			
 	.current_page_item > a,
 	.current-menu-item > a {
-		color: color(primary);
+		color: var(--smn--color--primary);
 	}
 
 	.current-menu-ancestor > .sub-menu {
@@ -132,7 +132,7 @@ Based on https://github.com/argenteum/accessible-nav-wp
 /* Show menu-button on mobile */
 button.menu-button {
 	display: none;
-	background: color(primary);
+	background: var(--smn--color--primary);
 	padding: 0.65rem 1rem;
 
 	&::before{

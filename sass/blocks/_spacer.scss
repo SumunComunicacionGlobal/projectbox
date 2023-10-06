@@ -1,5 +1,5 @@
 .components-resizable-box__container.block-library-spacer__resize-container {
-    background-color: color(primary-20);
+    background-color: var(--smn--color--primary-20);
 
     &:before {
         content: attr(data-spaceheight);

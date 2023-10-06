@@ -8,6 +8,6 @@
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     width: 168px;
-	color: color(primary);
+	color: var(--smn--color--primary);
 	border-bottom: 8px solid;
 }

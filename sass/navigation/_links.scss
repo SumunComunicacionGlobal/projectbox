@@ -1,11 +1,11 @@
 a {
-	color: color(body-link);
+	color: var(--smn--color--body-link);
 	text-decoration: none;
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: color(body-link)-hover;
+		color: var(--smn--color--body-link--hover);
 	}
 	&:focus {
 		outline: none;

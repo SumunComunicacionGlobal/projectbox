@@ -34,7 +34,7 @@ $email = get_theme_mod( 'cliente_email', 'sumun@sumun.net' );
 			?>
 
 			<aside class="col-xs-12 col-md-3 col-md-offset-1">
-				<div><strong><small><?php echo __( 'Tabla de contenido', 'projectbox' ); ?></small></strong></div>
+				<div><strong><small><?php echo __( 'En esta página verás...', 'projectbox' ); ?></small></strong></div>
 				<div id="ToC"></div>
 			</aside>
 
