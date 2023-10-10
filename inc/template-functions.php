@@ -67,32 +67,32 @@ function paginas_hijas( $atts ) {
 			$args['post_parent'] = 0;
 		}
 
-		if ( is_front_page() ) {
+		// if ( is_front_page() ) {
 
-			$r .= '<div class="paginas-hijas">';
+		// 	$r .= '<div class="paginas-hijas">';
 
-				$r .= '<div class="main-navigation">';
+		// 		$r .= '<div class="main-navigation">';
 
-					$r .= '<p class="text-h2">' . __( 'Contenido:', 'sumun' ) . '</p>';
+		// 			$r .= '<p class="text-h2">' . __( 'Contenido:', 'sumun' ) . '</p>';
 
-					$r .= '<ul class="menu">';
+		// 			$r .= '<ul class="menu">';
 
-						$page_list_args = array(
-							'title_li'		=> null,
-							'echo'			=> 0,
-							'walker'		=> new Custom_Walker_Page(),
-						);
+		// 				$page_list_args = array(
+		// 					'title_li'		=> null,
+		// 					'echo'			=> 0,
+		// 					'walker'		=> new Custom_Walker_Page(),
+		// 				);
 
-						$r .= wp_list_pages( $page_list_args );
+		// 				$r .= wp_list_pages( $page_list_args );
 
-					$r .= '</ul>';
+		// 			$r .= '</ul>';
 
-				$r .= '</div>';
+		// 		$r .= '</div>';
 
-			$r .= '</div>';
+		// 	$r .= '</div>';
 
-			return $r;
-		}
+		// 	return $r;
+		// }
 
 		$texto_ver_mas = '<p class="text-h2">' . __( 'Ver más:', 'sumun' ) . '</p>';
 
@@ -101,11 +101,11 @@ function paginas_hijas( $atts ) {
 
 		if ($query->have_posts() ) {
 
-			$r .= '<div class="paginas-hijas">';
+			$r .= '<div class="mas-contenido paginas-hijas">';
 
 				$r .= $texto_ver_mas;
 
-				// $r .= '<div class="wp-block-columns is-layout-flex">';
+				$r .= '<div class="wp-block-columns is-layout-flex">';
 
 				while($query->have_posts() ) { $query->the_post();
 
@@ -113,9 +113,9 @@ function paginas_hijas( $atts ) {
 						// $r .= '<a class="btn btn-primary mr-2 mb-2 pagina-hija" href="'.get_permalink( get_the_ID() ).'" title="'.get_the_title().'" role="button" aria-pressed="false">'.get_the_title().'</a>';
 
 
-						$r .= '<div class="wp-block-columns is-layout-flex">';
+						// $r .= '<div class="wp-block-columns is-layout-flex">';
 
-							$r .= '<div class="wp-block-column">';
+							// $r .= '<div class="wp-block-column">';
 
 								$r .= '<div class="wp-block-group is-style-card-link">';
 
@@ -127,13 +127,13 @@ function paginas_hijas( $atts ) {
 
 								$r .= '</div>';
 
-						$r .= '</div>';
+							// $r .= '</div>';
 
-						$r .= '</div>';
+						// $r .= '</div>';
 
 				}
 
-				// $r .= '</div>';
+				$r .= '</div>';
 
 			$r .= '</div>';
 
@@ -145,7 +145,7 @@ function paginas_hijas( $atts ) {
 			$query = new WP_Query($args);
 			if ($query->have_posts() && $query->found_posts > 1 ) {
 
-				$r .= '<div class="paginas-hijas">';
+				$r .= '<div class="mas-contenido paginas-hermanas">';
 
 				$r .= $texto_ver_mas;
 
