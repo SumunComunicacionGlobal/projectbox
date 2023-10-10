@@ -65,6 +65,7 @@ function paginas_hijas( $atts ) {
 			$args['post_parent'] = $id;
 		} elseif( is_front_page() ) {
 			$args['post_parent'] = 0;
+			$args['post__not_in'] = array( get_the_ID() );
 		}
 
 		// if ( is_front_page() ) {
