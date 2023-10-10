@@ -24,6 +24,10 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+
+  img {
+    width: 180px;
+  }
 }
 
 

@@ -29,7 +29,12 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding mt-2">
-			<?php if (the_custom_logo()); ?>
+			<?php if ( has_custom_logo() ) {
+				the_custom_logo();
+			} else {
+				echo get_bloginfo('name');
+			} ?>
+			<p class="brand-tagline"><?php echo __( 'Project Box', 'projectbox' ); ?></p>
 			
 		</div><!-- .site-branding -->
 
