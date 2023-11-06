@@ -116,7 +116,7 @@ svg.icon {
 h1, h2, h3, h4, h5, h6,
 .text-h1, .text-h2, .text-h3, .text-h4, .text-h5 {
 	clear: both;
-	margin-top: 0;
+	margin-top: 1.5em;
     font-family: var(--smn--font__heading);
     line-height: $font__line-height-header;
 }
