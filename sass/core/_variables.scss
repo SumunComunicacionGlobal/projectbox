@@ -58,24 +58,24 @@ $white-colors: (
     @return $collection;
 }
 
-$allColors: map-collect($primary-colors, $secondary-colors, $tertiary-colors, $text-colors, $background-colors, $feedback-colors); 
-// $gutenbergColors: map-collect($primary-colors, $white-colors, $secondary-colors, $tertiary-colors); 
-$gutenbergColors: (
-    primary: var(--smn--color--primary),
-    primary-100: var(--smn--color--primary-100),
-    primary-80: var(--smn--color--primary-80),
-    primary-60: var(--smn--color--primary-60),
-    primary-40: var(--smn--color--primary-40),
-    primary-20: var(--smn--color--primary-20),
-    white: var(--smn--color--white),
-    secondary: var(--smn--color--secondary),
-    tertiary: var(--smn--color--tertiary),
-);
-
 // Get a value from map. How to use: .class { color: color(primary) } 
 @function color($key) {
     @return map-get($allColors, $key);
 }
+
+$allColors: map-collect($primary-colors, $secondary-colors, $tertiary-colors, $text-colors, $background-colors, $feedback-colors); 
+// $gutenbergColors: map-collect($primary-colors, $white-colors, $secondary-colors, $tertiary-colors); 
+$gutenbergColors: (
+    primary: #{color(primary)},
+    primary-100: #{color(primary-100)},
+    primary-80: #{color(primary-80)},
+    primary-60: #{color(primary-60)},
+    primary-40: #{color(primary-40)},
+    primary-20: #{color(primary-20)},
+    white: #{color(white)},
+    secondary: #{color(secondary)},
+    tertiary: #{color(tertiary)},
+);
 
 /* Border radius */
 $border__radius: 6px;

@@ -37,19 +37,23 @@ ul.wp-block-list {
 	padding: 0;
 
 	li {
-		display: flex;
-		align-items: center; 
-	}
+		position: relative;
+		padding-left: 24px;
 
-	li:before{
-		display: inline-flex;
-		content: '';
- 		background-image: url(assets/icons/arrow-right.svg);
- 		background-size: contain;
-		background-repeat: no-repeat;
-		width: .5rem;
-		height: .5rem;
-		padding-right: 1rem;
+		&:before{
+			display: inline-flex;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: .5em;
+			background-image: url(assets/icons/arrow-right.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: .5rem;
+			height: .5rem;
+			padding-right: 1rem;
+		}
+
 	}
 }
 
