@@ -15,13 +15,19 @@
 	.site-header {
 		grid-area: site-header;
 		padding-right: $space-2;
-		border-right: 1px solid var(--smn--color--primary-20);
+		border-right: 1px solid var(--smn--color--light);
 
 		@include breakpoint(tablet) {
 			border-right: none;
 			padding-right: 0;
 		}
 
+	}
+
+	@include breakpoint-up(tablet) {
+		.help-header {
+			order: -1;
+		}
 	}
 
 	.header-contact {
@@ -47,7 +53,7 @@
 .mas-contenido {
 	margin-top: $space-10;
 	padding-top: $space-5;
-	// border-top: 1px solid var(--smn--color--primary-20);
+	// border-top: 1px solid var(--smn--color--light);
 
 	// @include breakpoint-up(mobile) {
 	// 	.wp-block-columns:not(.is-not-stacked-on-mobile) {
@@ -85,6 +91,6 @@
 	margin-bottom: $space-1;
 
 	a {
-		color: var(--smn--color--primary-80);
+		color: var(--smn--color--gray);
 	}
 }

@@ -14,7 +14,7 @@ body {
 }
 
 hr {
-	background-color: var(--smn--color--primary-20);
+	background-color: var(--smn--color--light);
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -44,7 +44,7 @@ figure {
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 
 	&:focus {
-		background-color: var(--smn--color--primary-20);
+		background-color: var(--smn--color--light);
 		border-radius: 3px;
 		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 		clip: auto !important;

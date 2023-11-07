@@ -1,16 +1,13 @@
 /* COLORS */
 $dark:          #212121;
-$primary:       $dark;
-$secondary:     #0020C1;
+//$primary:       $dark;
+//$secondary:     #0020C1;
+$primary:       #0020C1;
+$secondary:     $dark;
 $tertiary:      #FFEC00;
 
 $primary-colors: (
     primary: $primary,
-    primary-100: #000000,
-    primary-80: #76787C,
-    primary-60: #adb5bd,
-    primary-40: #dee2e6,
-    primary-20: #e9ecef,
 );
 
 $secondary-colors: (
@@ -24,8 +21,8 @@ $tertiary-colors: (
 $text-colors: (
     body-main: $dark,
     body-medium: #76787C,
-    body-link: #0020C1,
-    body-link--hover: #0020C1,
+    body-link: $primary,
+    body-link--hover: $primary,
     body-white: white,
 );
 
@@ -38,10 +35,9 @@ $feedback-colors: (
 
 $background-colors: (
     white: white,
-    gray: #c4cdd5,
-    gray-dark: #949ba5,
-    light: #F7F4F9,
-    dark: $dark,
+    gray: #76787C,
+    gray-dark: $dark,
+    light: #e9ecef,
 );
 
 $white-colors: (
@@ -67,14 +63,17 @@ $allColors: map-collect($primary-colors, $secondary-colors, $tertiary-colors, $t
 // $gutenbergColors: map-collect($primary-colors, $white-colors, $secondary-colors, $tertiary-colors); 
 $gutenbergColors: (
     primary: #{color(primary)},
-    primary-100: #{color(primary-100)},
-    primary-80: #{color(primary-80)},
-    primary-60: #{color(primary-60)},
-    primary-40: #{color(primary-40)},
-    primary-20: #{color(primary-20)},
-    white: #{color(white)},
     secondary: #{color(secondary)},
     tertiary: #{color(tertiary)},
+    white: #{color(white)},
+    light: #{color(light)},
+    gray: #{color(gray)},
+    gray-dark: #{color(gray-dark)},
+    primary-100: #{color(primary)},
+    primary-80: #{color(gray-dark)},
+    primary-60: #{color(gray)},
+    primary-40: #{color(gray)},
+    primary-20: #{color(light)},
 );
 
 /* Border radius */
@@ -116,11 +115,6 @@ $grid__gap-row: -$grid__gap;
     --smn--font__main: #{$font__main};
     --smn--font__heading: #{$font__heading};
     --smn--color--primary: #{color(primary)};
-    --smn--color--primary-100: #{color(primary-100)};
-    --smn--color--primary-80: #{color(primary-80)};
-    --smn--color--primary-60: #{color(primary-60)};
-    --smn--color--primary-40: #{color(primary-40)};
-    --smn--color--primary-20: #{color(primary-20)};
     --smn--color--secondary: #{color(secondary)};
     --smn--color--tertiary: #{color(tertiary)};
     --smn--color--body-main: #{color(body-main)};
@@ -135,5 +129,4 @@ $grid__gap-row: -$grid__gap;
     --smn--color--gray: #{color(gray)};
     --smn--color--gray-dark: #{color(gray-dark)};
     --smn--color--light: #{color(light)};
-    --smn--color--dark: #{color(dark)};
 }

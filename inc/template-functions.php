@@ -106,7 +106,7 @@ function paginas_hijas( $atts ) {
 
 				$r .= $texto_ver_mas;
 
-				$r .= '<div class="wp-block-columns is-layout-flex">';
+				// $r .= '<div class="wp-block-columns is-layout-flex">';
 
 				while($query->have_posts() ) { $query->the_post();
 
@@ -118,7 +118,7 @@ function paginas_hijas( $atts ) {
 
 							// $r .= '<div class="wp-block-column">';
 
-								$r .= '<div class="wp-block-group is-style-card-link">';
+								$r .= '<div class="wp-block-group is-style-card-link mb-3">';
 
 									$r .= '<div class="wp-block-group__inner-container">';
 
@@ -134,7 +134,7 @@ function paginas_hijas( $atts ) {
 
 				}
 
-				$r .= '</div>';
+				// $r .= '</div>';
 
 			$r .= '</div>';
 

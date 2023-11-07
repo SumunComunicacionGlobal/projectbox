@@ -19,11 +19,10 @@ textarea {
 	border-radius: 4px;
 	padding: $space-05;
 	width: 100%;
-	background-color: var(--smn--color--primary);
-	border: solid 1px var(--smn--color--primary);
+	//background-color: var(--smn--color--primary);
+	border: solid 1px var(--smn--color--light);
 
 	&:focus {
-		color: var(--smn--color--primary)-dark;
 		border: solid 1px var(--smn--color--primary);
 	}
 

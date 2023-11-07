@@ -1,4 +1,4 @@
-a {
+a:not(.btn):not(.wp-block-button__link):not(.wp-block-file__button) {
 	color: var(--smn--color--body-link);
 	text-decoration: none;
 

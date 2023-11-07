@@ -18,11 +18,6 @@ $email = get_theme_mod( 'cliente_email', 'sumun@sumun.net' );
 
 	<main id="primary" class="site-main mb-6">
 		<div class="row main-content">
-			<header class="col-xs-12 dflex between-xs middle-xs mt-3 mb-10">
-				<div><a href="https://sumun.net/"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo-sumun.png"></a></div>
-				<div class="header-contact"><p><?php echo __( '¿Tienes algunda duda?', 'projectbox' ); ?> <span>|</span> <strong><a href="mailto:<?php echo $email; ?>"><?php echo __( 'Consúltanos', 'projectbox' ); ?></a></strong></p></div>
-			</header>
-
 
 			<?php
 			while ( have_posts() ) :
@@ -37,6 +32,11 @@ $email = get_theme_mod( 'cliente_email', 'sumun@sumun.net' );
 				<div><strong><small><?php echo __( 'En esta página verás...', 'projectbox' ); ?></small></strong></div>
 				<div id="ToC"></div>
 			</aside>
+
+			<header class="help-header col-xs-12 dflex between-xs middle-xs mt-3 mb-10">
+				<div><a href="https://sumun.net/"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo-sumun.png"></a></div>
+				<div class="header-contact"><p><?php echo __( '¿Tienes algunda duda?', 'projectbox' ); ?> <span>|</span> <strong><a href="mailto:<?php echo $email; ?>"><?php echo __( 'Consúltanos', 'projectbox' ); ?></a></strong></p></div>
+			</header>
 
 		</div><!-- .main-content -->
 	</main><!-- #main -->
