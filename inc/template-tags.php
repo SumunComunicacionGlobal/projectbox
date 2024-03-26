@@ -163,3 +163,23 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+function smn_login_logout() {
+
+	if ( is_user_logged_in() ) {
+		$link = wp_logout_url( home_url() );
+		$text = __( 'Cerrar sesión', 'smn' );
+	} else {
+		$link = wp_login_url( home_url() );
+		$text = __( 'Iniciar sesión', 'smn' );
+	}
+	?>
+
+	<div class="wp-block-buttons">
+		<div class="wp-block-button is-style-outline has-small-font-size">
+			<a class="wp-block-button__link" href="<?php echo $link; ?> "><?php echo $text; ?></a>
+		</div>
+	</div>
+
+	<?php
+}

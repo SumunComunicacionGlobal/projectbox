@@ -234,12 +234,26 @@ function smn_pdf_links_new_tab(){
 function smn_default_menu() {
 
 	echo '<ul id="primary-menu" class="menu">';
-    
-	wp_list_pages( array(
-		'depth'			=> 4,
-		'title_li'		=> null,
-		'walker'		=> new Custom_Walker_Page(),
-	));
+
+		// show publish and private pages to logged in users
+		if ( is_user_logged_in() ) {
+
+			wp_list_pages( array(
+				'depth'			=> 4,
+				'title_li'		=> null,
+				'walker'		=> new Custom_Walker_Page(),
+				'post_status'	=> array( 'private', 'publish' ),
+			));
+
+		} else {
+
+			wp_list_pages( array(
+				'depth'			=> 4,
+				'title_li'		=> null,
+				'walker'		=> new Custom_Walker_Page(),
+			));
+		
+		}
 
 	echo '</ul>';
 
@@ -300,3 +314,10 @@ function list_block_wrapper( $block_content, $block ) {
 
     return $block_content;
 }
+
+function smn_hide_admin_bar_for_subscribers() {
+	if (current_user_can('subscriber') && !is_admin()) {
+		show_admin_bar(false);
+	}
+}
+add_action('after_setup_theme', 'smn_hide_admin_bar_for_subscribers');

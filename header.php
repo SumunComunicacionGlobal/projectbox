@@ -49,6 +49,9 @@
 						'fallback_cb'	 => 'smn_default_menu',
 						));
 					?>
+
+					<?php smn_login_logout(); ?>
+				
 				</nav>
 			</div>
 		</div><!-- #site-navigation -->

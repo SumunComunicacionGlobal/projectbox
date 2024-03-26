@@ -8,47 +8,50 @@
  */
 
 get_header();
+
+
 ?>
 
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'projectbox' ); ?></h1>
+				<h1 class="page-title"><?php esc_html_e( 'Página no encontrada', 'projectbox' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'projectbox' ); ?></p>
+				<p><?php esc_html_e( 'No hay nada aquí. Puede que sea una página privada o que se haya movido de ubicación.', 'projectbox' ); ?></p>
+
+				<p><?php esc_html_e( '¿Quieres iniciar sesión?', 'projectbox' ); ?></p>
 
 					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'projectbox' ); ?></h2>
-						<ul>
+					// login form
+					if ( ! is_user_logged_in() ) {
+						?>
+						<div class="login-form">
 							<?php
-							wp_list_categories(
+							wp_login_form(
 								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
+									'echo'           => true,
+									'redirect'       => home_url(),
+									'form_id'        => 'loginform',
+									'label_username' => __( 'Usuario' ),
+									'label_password' => __( 'Contraseña' ),
+									'label_remember' => __( 'Recordar' ),
+									'label_log_in'   => __( 'Iniciar sesión' ),
+									'id_username'    => 'user_login',
+									'id_password'    => 'user_pass',
+									'id_remember'    => 'rememberme',
+									'id_submit'      => 'wp-submit',
+									'remember'       => true,
+									'value_username' => '',
+									'value_remember' => false,
 								)
 							);
 							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$sumun_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'projectbox' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$sumun_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
+						</div>
+						<?php
+					}
 					?>
 
 			</div><!-- .page-content -->
