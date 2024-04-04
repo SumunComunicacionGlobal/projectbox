@@ -321,3 +321,31 @@ function smn_hide_admin_bar_for_subscribers() {
 	}
 }
 add_action('after_setup_theme', 'smn_hide_admin_bar_for_subscribers');
+
+function smn_make_wordpress_site_private(){
+	global $wp;
+	if (!is_user_logged_in() && $GLOBALS['pagenow'] !== 'wp-login.php'){
+	  wp_redirect(wp_login_url($wp->request));
+	  exit;
+	}
+}
+add_action('wp', 'smn_make_wordpress_site_private');
+  
+  function smn_custom_login_redirect( $redirect_to, $request, $user ) {
+	  
+	  $user = get_current_user();
+	  $user_role = $user->roles[0];
+  
+	  // Set the URL to redirect users to based on their role
+	  if ( $user_role == 'subscriber' ) {
+		  
+		  if ( $request != get_admin_url() ) {
+			  $redirect_to = get_home_url() . '/' . $request;
+		  } else {
+			  $redirect_to = get_home_url();
+		  }
+	  }
+   
+	  return $redirect_to;
+}
+add_filter( 'login_redirect', 'smn_custom_login_redirect', 10, 3 );
