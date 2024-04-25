@@ -39,6 +39,9 @@
 			<button class="menu-button btn btn--primary"><span class="screen-reader-text"><?php _e('Menu','sumun'); ?></span></button>
 			<div id="site-header-menu" class="site-header-menu">
 				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'sumun'); ?>">
+					
+					<?php get_search_form(); ?>
+					
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'primary',

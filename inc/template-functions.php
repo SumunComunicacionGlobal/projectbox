@@ -349,3 +349,16 @@ add_action('wp', 'smn_make_wordpress_site_private');
 	  return $redirect_to;
 }
 add_filter( 'login_redirect', 'smn_custom_login_redirect', 10, 3 );
+
+function smn_replace_placeholder_search_text( $form ) { 
+	$search = 'placeholder="' . __( 'Search' );
+	$replace = 'placeholder=" ' . __( 'Buscar contenido...', 'projectbox' );
+	$form = str_replace( $search, $replace, $form );
+	// $pattern = '/(placeholder=)".*"/';
+	// $new_text = __('Buscar contenido...', 'projectbox');
+	// $replacement = "$1" . "'Buscar contenido...'";
+	// $form = preg_replace($pattern, $replacement, $form); 
+	return $form;
+}
+
+add_filter( 'get_search_form', 'smn_replace_placeholder_search_text' );

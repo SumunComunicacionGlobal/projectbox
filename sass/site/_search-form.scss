@@ -1,0 +1,20 @@
+#site-navigation {
+
+    .search-form {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    input[type="search"] {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    input[type="submit"] {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: .5rem;
+        padding-right: 1rem;
+        @include font-size(.8);
+    }
+}

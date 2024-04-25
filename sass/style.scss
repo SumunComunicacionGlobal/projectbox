@@ -6,7 +6,7 @@ Primary Branch: main
 25Author: Sumun.net
 Author URI: https://sumun.net
 Description: Hola. Esto es el tema llamado <code>projectbox</code>, para <em>Sumun Comunicación Global</em>.
-Version: 1.1.1
+Version: 1.3
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -64,4 +64,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "site/hero";
 @import "site/posts-and-pages";
 @import "site/footer";
+@import "site/search-form";
+@import "site/search-results";
 
