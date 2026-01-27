@@ -247,10 +247,13 @@ function smn_default_menu() {
 
 		} else {
 
+			$paginas_publicas = projectbox_get_paginas_publicas();
+
 			wp_list_pages( array(
 				'depth'			=> 4,
 				'title_li'		=> null,
 				'walker'		=> new Custom_Walker_Page(),
+				'include'       => $paginas_publicas,
 			));
 		
 		}
@@ -324,7 +327,13 @@ add_action('after_setup_theme', 'smn_hide_admin_bar_for_subscribers');
 
 function smn_make_wordpress_site_private(){
 	global $wp;
-	if (!is_user_logged_in() && $GLOBALS['pagenow'] !== 'wp-login.php'){
+	
+	if (	!is_user_logged_in() && 
+			$GLOBALS['pagenow'] !== 'wp-login.php' && 
+			$GLOBALS['pagenow'] !== 'wp-activate.php' && 
+			$GLOBALS['pagenow'] !== 'wp-signup.php' &&
+			projectbox_is_pagina_publica() === false
+	) {
 	  wp_redirect(wp_login_url($wp->request));
 	  exit;
 	}
