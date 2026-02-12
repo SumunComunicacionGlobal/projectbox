@@ -13,14 +13,22 @@
 	}
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
-	color: var(--smn--color--primary);
-
-	&:hover {
-		color: inherit;
-	}
-}
-
 .wp-block-button__link:not(.has-text-color) {
 	background-color: var(--smn--color--primary);
 }
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+
+	&:not(.has-background) {
+		background-color: transparent;
+	}
+	
+	&:not(.has-text-color) {
+		color: var(--smn--color--primary);
+
+		&:hover {
+			color: inherit;
+		}
+	}
+}
+

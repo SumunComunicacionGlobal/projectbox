@@ -191,23 +191,71 @@ function projectbox_is_pagina_publica( $page_id = false ) {
 
 add_action( 'login_head', 'custom_login_css', 9999999999 );
 function custom_login_css() {
+
+    $stylesheet_directory_uri = get_stylesheet_directory_uri();
     
-    $logo_url = get_stylesheet_directory_uri(  ) . '/assets/img/sumun-logo.png'; // Ruta por defecto del logo
+    $logo_url = $stylesheet_directory_uri . '/assets/img/sumun-logo.png'; // Ruta por defecto del logo
     $custom_logo_id = get_theme_mod( 'custom_logo' );
     if ( $custom_logo_id ) {
         $logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );
     }
+    
     ?>
     <style type="text/css">
+
+        @font-face {
+            font-family: 'BW Nista';
+            src: url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Md.eot");
+            src: url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Md.eot") format("embedded-opentype"),
+            url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Md.woff2") format("woff2"),
+            url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Md.woff") format("woff");
+            display: swap;
+            font-weight: 400;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: 'BW Nista';
+            src: url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Lt.eot");
+            src: url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Lt.eot") format("embedded-opentype"),
+            url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Lt.woff2") format("woff2"),
+            url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-Lt.woff") format("woff");
+            display: swap;
+            font-weight: 300;
+            font-style: normal
+        }
+
+        @font-face {
+            font-family: 'BW Nista';
+            src: url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-xBd.eot");
+            src: url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-xBd.eot") format("embedded-opentype"),
+            url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-xBd.woff2") format("woff2"),
+            url("<?php echo esc_url( $stylesheet_directory_uri ); ?>/assets/fonts/BwNistaInt-xBd.woff") format("woff");
+            display: swap;
+            font-weight: 700;
+            font-style: normal
+        }
+
         body {
             background-color: white;
+            font-family: 'BW Nista', sans-serif;
+            font-weight: 300;
+        }
+        #login {
+            width: 440px;
+            max-width: 90%;
         }
         .login h1 a {
+            position: relative;
             background-image: url(<?php echo esc_url( $logo_url ); ?>);
             background-position: center;
             background-size: contain;
-            width: 200px;
-            height: auto;
+            width: 100%;
+            max-width: 256px;
+            height: 100px;
+            text-indent: 0;
+            overflow: visible;
+            margin-bottom: 32px;
         }
         .login form {
             border-radius: .5rem;
@@ -225,10 +273,40 @@ function custom_login_css() {
             background-color: #333;
             border-color: #333;
         }
+        .login-logo-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            display: block;
+        }
+        .login .message {
+            border-left: inherit;
+            border-radius: .5rem;
+            box-shadow: none;
+            border: 1px solid #f1f1f1;
+        }
         
     </style>
     <?php
 }
+
 add_filter( 'login_headerurl', function() {
     return home_url('/');
+} );
+
+function smn_login_logo_url_title() {
+    return '<span class="login-logo-title">' . __( 'Project&nbsp;<b>Box</b>', 'projectbox' ) . '</span>';
+}
+add_filter( 'login_headertext', 'smn_login_logo_url_title' );
+
+add_filter( 'login_message', function( $message ) {
+    if ( empty( $message ) ) {
+        $message = '<p class="message">' . __( 'Estás intentando acceder a un contenido protegido de tu Project&nbsp;Box. Por favor, inicia sesión para continuar.', 'projectbox' ) . '</p>';
+    }
+    return $message;
 } );
