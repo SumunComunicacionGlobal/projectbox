@@ -342,7 +342,11 @@ add_action('wp', 'smn_make_wordpress_site_private');
   
   function smn_custom_login_redirect( $redirect_to, $request, $user ) {
 	  
+
 	  $user = get_current_user();
+	  if ( !$user || is_string( $user )	) {
+		  return $redirect_to;
+	  }
 	  $user_role = $user->roles[0];
   
 	  // Set the URL to redirect users to based on their role
