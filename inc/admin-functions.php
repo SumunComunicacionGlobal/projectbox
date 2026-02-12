@@ -189,3 +189,46 @@ function projectbox_is_pagina_publica( $page_id = false ) {
     return in_array( absint( $page_id ), $paginas_publicas );
 }
 
+add_action( 'login_head', 'custom_login_css', 9999999999 );
+function custom_login_css() {
+    
+    $logo_url = get_stylesheet_directory_uri(  ) . '/assets/img/sumun-logo.png'; // Ruta por defecto del logo
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    if ( $custom_logo_id ) {
+        $logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );
+    }
+    ?>
+    <style type="text/css">
+        body {
+            background-color: white;
+        }
+        .login h1 a {
+            background-image: url(<?php echo esc_url( $logo_url ); ?>);
+            background-position: center;
+            background-size: contain;
+            width: 200px;
+            height: auto;
+        }
+        .login form {
+            border-radius: .5rem;
+            background-color: #f1f1f1;
+            border: 0;
+        }
+        .wp-core-ui .button {
+            border-radius: .5rem;
+        }
+        .wp-core-ui .button-primary {
+            background-color: black;
+            border-color: black;
+        }
+        .wp-core-ui .button-primary:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+        
+    </style>
+    <?php
+}
+add_filter( 'login_headerurl', function() {
+    return home_url('/');
+} );
